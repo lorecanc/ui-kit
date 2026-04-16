@@ -21,75 +21,75 @@ import {
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '../../../components/ui/select';
 import { Plus, CalendarIcon } from 'lucide-react';
 import { cn } from '../../../lib/utils';
-import { PageLayout } from '../PageLayout';
-
 export function CalendarSchedulingPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-    <PageLayout
-      title="Calendar"
-      description="Schedule and manage your events."
-      actions={
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button><Plus className="mr-2 h-4 w-4" /> New Event</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Create Event</DialogTitle>
-              <DialogDescription>Add a new event to your calendar.</DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">Calendar & Scheduling</h1>
+          <p className="text-sm text-muted-foreground mt-1">Organize your events, meetings, and deadlines.</p>
+        </div>
+      </div>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button><Plus className="mr-2 h-4 w-4" /> New Event</Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Create Event</DialogTitle>
+            <DialogDescription>Add a new event to your calendar.</DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="event-title">Event Title</Label>
+              <Input id="event-title" placeholder="Team meeting" />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="event-title">Event Title</Label>
-                <Input id="event-title" placeholder="Team meeting" />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label>Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button variant="outline" className="w-full justify-start text-left font-normal">
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {date ? date.toLocaleDateString() : "Pick a date"}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0">
-                      <CalendarComponent mode="single" selected={date} onSelect={setDate} initialFocus />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="event-time">Time</Label>
-                  <Input id="event-time" type="time" defaultValue="09:00" />
-                </div>
+                <Label>Date</Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="outline" className="w-full justify-start text-left font-normal">
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {date ? date.toLocaleDateString() : "Pick a date"}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0">
+                    <CalendarComponent mode="single" selected={date} onSelect={setDate} initialFocus />
+                  </PopoverContent>
+                </Popover>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="event-type">Type</Label>
-                <Select>
-                  <SelectTrigger><SelectValue placeholder="Select type" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="meeting">Meeting</SelectItem>
-                    <SelectItem value="deadline">Deadline</SelectItem>
-                    <SelectItem value="reminder">Reminder</SelectItem>
-                    <SelectItem value="personal">Personal</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="event-desc">Description</Label>
-                <Textarea id="event-desc" placeholder="Event details..." />
+                <Label htmlFor="event-time">Time</Label>
+                <Input id="event-time" type="time" defaultValue="09:00" />
               </div>
             </div>
-            <DialogFooter>
-              <DialogClose asChild><Button variant="outline">Cancel</Button></DialogClose>
-              <DialogClose asChild><Button>Create Event</Button></DialogClose>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      }
-    >
+            <div className="space-y-2">
+              <Label htmlFor="event-type">Type</Label>
+              <Select>
+                <SelectTrigger><SelectValue placeholder="Select type" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="meeting">Meeting</SelectItem>
+                  <SelectItem value="deadline">Deadline</SelectItem>
+                  <SelectItem value="reminder">Reminder</SelectItem>
+                  <SelectItem value="personal">Personal</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="event-desc">Description</Label>
+              <Textarea id="event-desc" placeholder="Event details..." />
+            </div>
+          </div>
+          <DialogFooter>
+            <DialogClose asChild><Button variant="outline">Cancel</Button></DialogClose>
+            <DialogClose asChild><Button>Create Event</Button></DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2">
           <CardContent className="p-6">
@@ -139,6 +139,6 @@ export function CalendarSchedulingPage() {
           </CardContent>
         </Card>
       </div>
-    </PageLayout>
+    </div>
   );
 }

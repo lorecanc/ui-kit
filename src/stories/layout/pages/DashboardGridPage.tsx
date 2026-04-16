@@ -25,8 +25,6 @@ import {
 import { MoreHorizontalIcon } from 'lucide-react';
 import { Button } from '../../../components/ui/button';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '../../../components/ui/select';
-import { PageLayout } from '../PageLayout';
-
 const chartData = [
   { month: "January", desktop: 186, mobile: 80, tablet: 40 },
   { month: "February", desktop: 305, mobile: 200, tablet: 90 },
@@ -51,8 +49,14 @@ const tableData = [
 
 export function DashboardGridPage() {
   return (
-    <PageLayout title="Main Dashboard" description="General overview and real-time alerts.">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <div className="space-y-6">
+      {/* Page Header */}
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight text-foreground">Dashboard Grid</h1>
+        <p className="text-sm text-muted-foreground mt-1">High-density view of multiple metrics and capabilities in a single pane of glass.</p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card className="lg:col-span-2">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-lg">Primary Trend Chart</CardTitle>
@@ -130,6 +134,6 @@ export function DashboardGridPage() {
           </Table>
         </CardContent>
       </Card>
-    </PageLayout>
+    </div>
   );
 }

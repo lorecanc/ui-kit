@@ -41,96 +41,95 @@ import { Alert, AlertTitle, AlertDescription } from '../../../components/ui/aler
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../../components/ui/tooltip';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '../../../components/ui/select';
 import { Plus, Eye, Pencil, Trash2, Info } from 'lucide-react';
-import { PageLayout } from '../PageLayout';
-
 export function FormManagementPage() {
   return (
-    <PageLayout
-      title="Form Management"
-      description="Create and manage records with full form controls."
-      actions={
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button><Plus className="mr-2 h-4 w-4" /> Add New Record</Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[525px]">
-            <DialogHeader>
-              <DialogTitle>New Record</DialogTitle>
-              <DialogDescription>Fill in the details below to create a new record.</DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input id="name" placeholder="John Doe" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" placeholder="+1 234 567 890" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="category">Category</Label>
-                  <Select>
-                    <SelectTrigger><SelectValue placeholder="Select..." /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="tech">Technology</SelectItem>
-                      <SelectItem value="marketing">Marketing</SelectItem>
-                      <SelectItem value="finance">Finance</SelectItem>
-                      <SelectItem value="design">Design</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+    <div className="space-y-6">
+      {/* Page Header */}
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight text-foreground">Form Management</h1>
+        <p className="text-sm text-muted-foreground mt-1">Manage, validate, and process your data records effectively.</p>
+      </div>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button><Plus className="mr-2 h-4 w-4" /> Add New Record</Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[525px]">
+          <DialogHeader>
+            <DialogTitle>New Record</DialogTitle>
+            <DialogDescription>Fill in the details below to create a new record.</DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" placeholder="John Doe" />
               </div>
               <div className="space-y-2">
-                <Label>Priority Level</Label>
-                <RadioGroup defaultValue="medium" className="flex gap-6">
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="low" id="low" />
-                    <Label htmlFor="low" className="font-normal">Low</Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="medium" id="medium" />
-                    <Label htmlFor="medium" className="font-normal">Medium</Label>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <RadioGroupItem value="high" id="high" />
-                    <Label htmlFor="high" className="font-normal">High</Label>
-                  </div>
-                </RadioGroup>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="notes">Notes</Label>
-                <Textarea id="notes" placeholder="Additional details..." />
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Checkbox id="notifications" />
-                  <Label htmlFor="notifications" className="font-normal">Send notifications</Label>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Label htmlFor="active" className="font-normal">Active</Label>
-                  <Switch id="active" defaultChecked />
-                </div>
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="john@example.com" />
               </div>
             </div>
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button variant="outline">Cancel</Button>
-              </DialogClose>
-              <DialogClose asChild>
-                <Button>Save Record</Button>
-              </DialogClose>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      }
-    >
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone</Label>
+                <Input id="phone" placeholder="+1 234 567 890" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="category">Category</Label>
+                <Select>
+                  <SelectTrigger><SelectValue placeholder="Select..." /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="tech">Technology</SelectItem>
+                    <SelectItem value="marketing">Marketing</SelectItem>
+                    <SelectItem value="finance">Finance</SelectItem>
+                    <SelectItem value="design">Design</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label>Priority Level</Label>
+              <RadioGroup defaultValue="medium" className="flex gap-6">
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem value="low" id="low" />
+                  <Label htmlFor="low" className="font-normal">Low</Label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem value="medium" id="medium" />
+                  <Label htmlFor="medium" className="font-normal">Medium</Label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <RadioGroupItem value="high" id="high" />
+                  <Label htmlFor="high" className="font-normal">High</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="notes">Notes</Label>
+              <Textarea id="notes" placeholder="Additional details..." />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Checkbox id="notifications" />
+                <Label htmlFor="notifications" className="font-normal">Send notifications</Label>
+              </div>
+              <div className="flex items-center gap-2">
+                <Label htmlFor="active" className="font-normal">Active</Label>
+                <Switch id="active" defaultChecked />
+              </div>
+            </div>
+          </div>
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DialogClose>
+            <DialogClose asChild>
+              <Button>Save Record</Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       <Alert className="mb-6">
         <Info className="h-4 w-4" />
         <AlertTitle>Form Validation</AlertTitle>
@@ -210,6 +209,6 @@ export function FormManagementPage() {
           </Table>
         </CardContent>
       </Card>
-    </PageLayout>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Bell } from "lucide-react"
 import { cn } from "../../lib/utils"
+import { SidebarTrigger } from "../ui/sidebar"
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -64,6 +65,7 @@ export function GlobalHeader({
             {...props}
         >
             <div className="flex items-center gap-4">
+                <SidebarTrigger className="md:hidden" />
                 {logo}
                 {breadcrumbs.length > 0 && (
                     <Breadcrumb>

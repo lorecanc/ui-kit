@@ -39,20 +39,15 @@ import {
   ComboboxItem,
 } from '../../../components/ui/combobox';
 import { Search, Download, Filter, MoreHorizontalIcon, Eye, Pencil, Trash2 } from 'lucide-react';
-import { PageLayout } from '../PageLayout';
-
 export function DataManagementPage() {
   return (
-    <PageLayout
-      title="Data Management"
-      description="Browse, filter, and export your data."
-      actions={
-        <>
-          <Button variant="outline" size="sm"><Download className="mr-2 h-4 w-4" /> Export</Button>
-          <Button size="sm"><Filter className="mr-2 h-4 w-4" /> Filters</Button>
-        </>
-      }
-    >
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">Data Management</h1>
+          <p className="text-sm text-muted-foreground mt-1">View, filter, and modify your records.</p>
+        </div>
+      </div>
       <Card>
         <CardHeader className="pb-3">
           <div className="flex flex-col sm:flex-row gap-3">
@@ -175,6 +170,6 @@ export function DataManagementPage() {
           ))}
         </CardContent>
       </Card>
-    </PageLayout>
+    </div>
   );
 }

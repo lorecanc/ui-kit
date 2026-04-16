@@ -9,11 +9,15 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../../components/ui
 import { ToggleGroup, ToggleGroupItem } from '../../../components/ui/toggle-group';
 import { Switch } from '../../../components/ui/switch';
 import { Sun, Moon, Monitor, MapPin, Globe, Shield, Lock, Camera } from 'lucide-react';
-import { PageLayout } from '../PageLayout';
-
 export function SettingsProfilePage() {
   return (
-    <PageLayout title="Settings" description="Manage your account and preferences.">
+    <div className="space-y-6">
+      {/* Page Header */}
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight text-foreground">Settings & Profile</h1>
+        <p className="text-sm text-muted-foreground mt-1">Manage your account settings and preferences.</p>
+      </div>
+
       <Tabs defaultValue="profile" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="profile">Profile</TabsTrigger>
@@ -194,6 +198,6 @@ export function SettingsProfilePage() {
           </Card>
         </TabsContent>
       </Tabs>
-    </PageLayout>
+    </div>
   );
 }

@@ -7,11 +7,15 @@ import { ScrollArea, ScrollBar } from '../../../components/ui/scroll-area';
 import { Alert, AlertTitle, AlertDescription } from '../../../components/ui/alert';
 import { CheckCircle2, AlertTriangle, Search, Paperclip, Smile, Send } from 'lucide-react';
 import { cn } from '../../../lib/utils';
-import { PageLayout } from '../PageLayout';
-
 export function CommunicationPage() {
   return (
-    <PageLayout title="Messages" description="Your conversations and notifications.">
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">Messages & Communication</h1>
+          <p className="text-sm text-muted-foreground mt-1">Stay connected with your team and review alerts.</p>
+        </div>
+      </div>
       <div className="grid gap-3 mb-6">
         <Alert>
           <CheckCircle2 className="h-4 w-4" />
@@ -135,6 +139,6 @@ export function CommunicationPage() {
           </div>
         </CardContent>
       </Card>
-    </PageLayout>
+    </div>
   );
 }

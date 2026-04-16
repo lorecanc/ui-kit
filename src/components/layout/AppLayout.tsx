@@ -1,32 +1,37 @@
 import * as React from "react"
-import { cn } from "../../lib/utils"
-import {
-    Sidebar,
-    SidebarProvider,
-    SidebarInset,
-} from "../ui/sidebar"
+import { SidebarProvider, SidebarInset } from "../ui/sidebar"
+import { AppSidebar, type NavItem } from "./AppSidebar"
+import { GlobalHeader, type BreadcrumbData } from "./GlobalHeader"
+import { PageContent } from "./PageContent"
 
 export interface AppLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
-    sidebar?: React.ReactNode;
-    header?: React.ReactNode;
-    children?: React.ReactNode;
-    defaultSidebarOpen?: boolean;
+  navItems?: NavItem[];
+  currentPath?: string;
+  brandName?: string;
+  breadcrumbs?: BreadcrumbData[];
+  defaultSidebarOpen?: boolean;
 }
 
-export function AppLayout({ sidebar, header, children, defaultSidebarOpen = true, className, ...props }: AppLayoutProps) {
-    return (
-        <SidebarProvider defaultOpen={defaultSidebarOpen}>
-            <div className={cn("flex h-screen w-full overflow-hidden bg-background text-foreground", className)} {...props}>
-                <Sidebar variant="floating" collapsible="icon">
-                    {sidebar}
-                </Sidebar>
-                <SidebarInset className="flex flex-col min-w-0 h-full overflow-hidden relative">
-                    {header}
-                    <div className="flex-1 overflow-y-auto">
-                        {children}
-                    </div>
-                </SidebarInset>
-            </div>
-        </SidebarProvider>
-    )
+export function AppLayout({
+  navItems = [],
+  currentPath = "/",
+  brandName = "Design System",
+  breadcrumbs = [],
+  defaultSidebarOpen = true,
+  className,
+  children,
+  ...props
+}: AppLayoutProps) {
+  return (
+    <SidebarProvider defaultOpen={defaultSidebarOpen}>
+      <AppSidebar items={navItems} currentPath={currentPath} brandName={brandName} />
+      <SidebarInset>
+        <GlobalHeader breadcrumbs={breadcrumbs} />
+
+        <PageContent>
+          {children}
+        </PageContent>
+      </SidebarInset>
+    </SidebarProvider>
+  )
 }

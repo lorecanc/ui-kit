@@ -19,11 +19,15 @@ import {
   AlertDialogTrigger,
 } from '../../../components/ui/alert-dialog';
 import { Database, Search, Lock, XCircle, Plus, Trash2, LogOut } from 'lucide-react';
-import { PageLayout } from '../PageLayout';
-
 export function FeedbackPage() {
   return (
-    <PageLayout title="Feedback & States" description="Empty states, loading indicators, and user feedback patterns.">
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">Feedback & States</h1>
+          <p className="text-sm text-muted-foreground mt-1">Examples of loading, empty, and error feedback states.</p>
+        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <Card>
           <CardHeader>
@@ -224,6 +228,6 @@ export function FeedbackPage() {
           </div>
         </CardContent>
       </Card>
-    </PageLayout>
+    </div>
   );
 }

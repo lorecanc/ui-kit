@@ -26,11 +26,17 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story) => (
-      <div className="min-h-[100px] flex items-center justify-center p-4">
-        <Story />
-      </div>
-    ),
+    (Story, context) => {
+      const isFullscreen = context.parameters?.layout === 'fullscreen';
+      if (isFullscreen) {
+        return <Story />;
+      }
+      return (
+        <div className="min-h-[100px] flex items-center justify-center p-4">
+          <Story />
+        </div>
+      );
+    },
   ],
 };
 

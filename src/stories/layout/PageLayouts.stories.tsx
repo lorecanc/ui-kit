@@ -1,10 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { AppLayout } from '../../components/layout/AppLayout';
-import { GlobalHeader } from '../../components/layout/GlobalHeader';
-import { TooltipProvider } from '../../components/ui/tooltip';
-import { NavSidebar } from './NavSidebar';
-import { defaultNavItems } from './navItems';
+import { StoryShell } from './StoryShell';
 
 import { OverviewPage } from './pages/OverviewPage';
 import { DashboardGridPage } from './pages/DashboardGridPage';
@@ -17,7 +13,7 @@ import { CalendarSchedulingPage } from './pages/CalendarSchedulingPage';
 import { CommunicationPage } from './pages/CommunicationPage';
 import { FeedbackPage } from './pages/FeedbackPage';
 
-const meta: Meta<typeof AppLayout> = {
+const meta: Meta = {
   title: 'Layout/PageLayouts',
   parameters: {
     layout: 'fullscreen',
@@ -28,50 +24,9 @@ const meta: Meta<typeof AppLayout> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// STORY SHELL — wraps page content with AppLayout boilerplate
-// ─────────────────────────────────────────────────────────────────────────────
-function StoryShell({ currentPath, breadcrumbTitle, children }: {
-  currentPath: string;
-  breadcrumbTitle: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <TooltipProvider>
-      <div className="bg-muted/20">
-        <AppLayout
-          sidebar={
-            <NavSidebar
-              items={defaultNavItems}
-              currentPath={currentPath}
-              brandName="Design System"
-            />
-          }
-          header={
-            <GlobalHeader
-              className="lg:bg-transparent lg:border-none lg:px-6"
-              userName="User"
-              breadcrumbs={[
-                { title: "Home", href: "/" },
-                { title: breadcrumbTitle },
-              ]}
-            />
-          }
-        >
-          {children}
-        </AppLayout>
-      </div>
-    </TooltipProvider>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// STORIES — each story is 3 lines of boilerplate
-// ─────────────────────────────────────────────────────────────────────────────
-
 /**
  * **1. Default Overview**
- * The canonical page layout pattern. Uses `p-8 pt-0` with natural block flow.
+ * The canonical page layout pattern.
  */
 export const DefaultOverview: Story = {
   render: () => (

@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { TooltipProvider } from '../../components/ui/tooltip';
 import { AppLayout } from '../../components/layout/AppLayout';
-import { GlobalHeader } from '../../components/layout/GlobalHeader';
-import { NavSidebar } from './NavSidebar';
+import { defaultNavItems } from './navItems';
 
 interface StoryShellProps {
   currentPath: string;
@@ -15,21 +14,13 @@ export function StoryShell({ currentPath, breadcrumbTitle, children }: StoryShel
     <TooltipProvider>
       <div className="bg-muted/20">
         <AppLayout
-          sidebar={
-            <NavSidebar
-              currentPath={currentPath}
-            />
-          }
-          header={
-            <GlobalHeader
-              className="lg:bg-transparent lg:border-none lg:px-6"
-              userName="User"
-              breadcrumbs={[
-                { title: "Home", href: "/" },
-                { title: breadcrumbTitle },
-              ]}
-            />
-          }
+          navItems={defaultNavItems}
+          currentPath={currentPath}
+          brandName="Design System"
+          breadcrumbs={[
+            { title: "Home", href: "/" },
+            { title: breadcrumbTitle },
+          ]}
         >
           {children}
         </AppLayout>
