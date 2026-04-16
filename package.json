@@ -26,6 +26,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "generate:docs": "node scripts/generate-docs.mjs",
+    "docs": "node scripts/docs/index.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

@@ -1,15 +1,16 @@
-import * as React from "react"
+import type React from "react"
 import { SidebarProvider, SidebarInset } from "../ui/sidebar"
 import { AppSidebar, type NavItem } from "./AppSidebar"
 import { GlobalHeader, type BreadcrumbData } from "./GlobalHeader"
 import { PageContent } from "./PageContent"
 
-export interface AppLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface AppLayoutProps {
   navItems?: NavItem[];
   currentPath?: string;
   brandName?: string;
   breadcrumbs?: BreadcrumbData[];
   defaultSidebarOpen?: boolean;
+  children?: React.ReactNode;
 }
 
 export function AppLayout({
@@ -18,9 +19,7 @@ export function AppLayout({
   brandName = "Design System",
   breadcrumbs = [],
   defaultSidebarOpen = true,
-  className,
   children,
-  ...props
 }: AppLayoutProps) {
   return (
     <SidebarProvider defaultOpen={defaultSidebarOpen}>

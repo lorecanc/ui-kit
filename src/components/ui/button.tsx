@@ -41,6 +41,24 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * A versatile button component with multiple variants and sizes.
+ * Supports CVA (Class Variance Authority) for flexible styling and asChild pattern for polymorphic behavior.
+ *
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <Button>Click me</Button>
+ *
+ * // With variant and size
+ * <Button variant="outline" size="sm">Small Outline</Button>
+ *
+ * // Using asChild for polymorphic usage
+ * <Button asChild>
+ *   <a href="/dashboard">Go to Dashboard</a>
+ * </Button>
+ * ```
+ */
 function Button({
   className,
   variant = "default",
@@ -49,6 +67,7 @@ function Button({
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
+    /** Delega il rendering al child element usando Slot.Root */
     asChild?: boolean
   }) {
   const Comp = asChild ? Slot.Root : "button"

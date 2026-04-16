@@ -5,6 +5,27 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { XIcon } from "lucide-react"
 
+/**
+ * A drawer component that slides in from the edge of the screen.
+ * Based on Radix UI Dialog primitive.
+ *
+ * @example
+ * ```tsx
+ * <Sheet open={open} onOpenChange={setOpen}>
+ *   <SheetTrigger asChild>
+ *     <Button>Open Sheet</Button>
+ *   </SheetTrigger>
+ *   <SheetContent side="right">
+ *     <SheetHeader>
+ *       <SheetTitle>My Sheet</SheetTitle>
+ *       <SheetDescription>Description text here.</SheetDescription>
+ *     </SheetHeader>
+ *     <div>Content goes here</div>
+ *     <SheetFooter>Footer content</SheetFooter>
+ *   </SheetContent>
+ * </Sheet>
+ * ```
+ */
 function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />
 }
@@ -43,6 +64,17 @@ function SheetOverlay({
   )
 }
 
+/**
+ * The content area of the sheet. Contains the overlay, close button, and actual content.
+ * Supports side ("top" | "right" | "bottom" | "left") to control which edge the sheet slides from.
+ *
+ * @example
+ * ```tsx
+ * <SheetContent side="left" className="w-80">
+ *   <p>Sheet content here</p>
+ * </SheetContent>
+ * ```
+ */
 function SheetContent({
   className,
   children,
@@ -50,7 +82,9 @@ function SheetContent({
   showCloseButton = true,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
+  /** Which edge of the screen the sheet slides from. */
   side?: "top" | "right" | "bottom" | "left"
+  /** Whether to show the X close button in the top-right corner. */
   showCloseButton?: boolean
 }) {
   return (

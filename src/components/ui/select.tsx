@@ -6,12 +6,30 @@ import { Select as SelectPrimitive } from "radix-ui"
 import { cn } from "@/lib/utils"
 import { ChevronDownIcon, CheckIcon, ChevronUpIcon } from "lucide-react"
 
+/**
+ * Accessible select component based on Radix UI.
+ * Exporta sub-components: SelectTrigger, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectGroup, SelectValue.
+ *
+ * @example
+ * ```tsx
+ * <Select>
+ *   <SelectTrigger placeholder="Select an option" />
+ *   <SelectContent>
+ *     <SelectItem value="1">Option One</SelectItem>
+ *     <SelectItem value="2">Option Two</SelectItem>
+ *   </SelectContent>
+ * </Select>
+ * ```
+ */
 function Select({
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Root>) {
   return <SelectPrimitive.Root data-slot="select" {...props} />
 }
 
+/**
+ * Groups SelectItem elements together.
+ */
 function SelectGroup({
   className,
   ...props
@@ -31,12 +49,24 @@ function SelectValue({
   return <SelectPrimitive.Value data-slot="select-value" {...props} />
 }
 
+/**
+ * The trigger button that opens the select dropdown.
+ * Supports size prop for different heights ("sm" | "default").
+ *
+ * @example
+ * ```tsx
+ * <SelectTrigger>
+ *   <SelectValue placeholder="Choose..." />
+ * </SelectTrigger>
+ * ```
+ */
 function SelectTrigger({
   className,
   size = "default",
   children,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Trigger> & {
+  /** Determines the height and padding of the trigger. */
   size?: "sm" | "default"
 }) {
   return (
