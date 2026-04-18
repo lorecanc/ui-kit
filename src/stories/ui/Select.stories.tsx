@@ -45,15 +45,15 @@ export const Default: Story = {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Colori Havas</SelectLabel>
-          <SelectItem value="red">Brand Red</SelectItem>
-          <SelectItem value="black">Black</SelectItem>
+          <SelectLabel>Primary Colors</SelectLabel>
+          <SelectItem value="blue">Primary Blue</SelectItem>
+          <SelectItem value="gray">Neutral Gray</SelectItem>
           <SelectItem value="white">White</SelectItem>
         </SelectGroup>
         <SelectGroup>
-            <SelectLabel>Colori Supporto</SelectLabel>
-            <SelectItem value="teal">Teal</SelectItem>
-            <SelectItem value="cyan">Cyan</SelectItem>
+            <SelectLabel>Secondary Colors</SelectLabel>
+            <SelectItem value="indigo">Indigo</SelectItem>
+            <SelectItem value="emerald">Emerald</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
@@ -71,15 +71,15 @@ export const SelectionInteraction: Story = {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectLabel>Colori Havas</SelectLabel>
-          <SelectItem value="red">Brand Red</SelectItem>
-          <SelectItem value="black">Black</SelectItem>
+          <SelectLabel>Primary Colors</SelectLabel>
+          <SelectItem value="blue">Primary Blue</SelectItem>
+          <SelectItem value="gray">Neutral Gray</SelectItem>
           <SelectItem value="white">White</SelectItem>
         </SelectGroup>
         <SelectGroup>
-            <SelectLabel>Colori Supporto</SelectLabel>
-            <SelectItem value="teal">Teal</SelectItem>
-            <SelectItem value="cyan">Cyan</SelectItem>
+            <SelectLabel>Secondary Colors</SelectLabel>
+            <SelectItem value="indigo">Indigo</SelectItem>
+            <SelectItem value="emerald">Emerald</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
@@ -88,7 +88,7 @@ export const SelectionInteraction: Story = {
     const canvas = within(canvasElement)
     const trigger = canvas.getByRole('combobox', { name: /scegli un colore/i })
     await userEvent.click(trigger)
-    const item = canvas.getByRole('option', { name: /brand red/i })
+    const item = canvas.getByRole('option', { name: /primary blue/i })
     await userEvent.click(item)
   },
 }

@@ -1,4 +1,4 @@
-# 📚 Havas UI — Library Tour
+# 📚 UI Kit — Library Tour
 
 > Documentazione autogenerata. Ultima build: 2026-04-16T17:16:14.757Z
 > Script: `npm run docs`

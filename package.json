@@ -1,22 +1,22 @@
 {
-  "name": "@csa-italy/havas-ui",
-  "version": "1.0.2",
+  "name": "@ui-kit/ui-kit",
+  "version": "1.0.0",
   "type": "module",
-  "description": "CSA Italy UI component library",
+  "description": "Generic UI component library built on shadcn/ui + Tailwind CSS",
   "license": "MIT",
-  "repository": "https://github.com/CSA-Italy/havas-ui.git",
-  "homepage": "https://github.com/CSA-Italy/havas-ui#readme",
-  "main": "./dist/havas-ui.umd.cjs",
-  "module": "./dist/havas-ui.js",
+  "repository": "https://github.com/example/ui-kit.git",
+  "homepage": "https://github.com/example/ui-kit#readme",
+  "main": "./dist/ui-kit.umd.cjs",
+  "module": "./dist/ui-kit.js",
   "types": "./dist/src/index.d.ts",
 
   "exports": {
     ".": {
       "types": "./dist/src/index.d.ts",
-      "import": "./dist/havas-ui.js",
-      "require": "./dist/havas-ui.umd.cjs"
+      "import": "./dist/ui-kit.js",
+      "require": "./dist/ui-kit.umd.cjs"
     },
-    "./theme.css": "./dist/havas-ui.css"
+    "./theme.css": "./dist/ui-kit.css"
   },
   "files": [
     "dist",

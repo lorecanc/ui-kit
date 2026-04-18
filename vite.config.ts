@@ -24,8 +24,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'HavasUI',
-      fileName: 'havas-ui',
+      name: 'UIKit',
+      fileName: 'ui-kit',
       formats: ['es', 'umd']
     },
     rollupOptions: {

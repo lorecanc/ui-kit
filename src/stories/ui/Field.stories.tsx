@@ -108,7 +108,7 @@ export const WithFieldSet: Story = {
         <FieldSeparator>Contatti</FieldSeparator>
         <Field>
           <FieldLabel>Email</FieldLabel>
-          <Input type="email" placeholder="mario.rossi@havas.com" />
+      <Input type="email" placeholder="mario.rossi@example.com" />
         </Field>
       </FieldGroup>
     </FieldSetComponent>

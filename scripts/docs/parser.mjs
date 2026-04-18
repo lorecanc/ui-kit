@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '../..');
 
-const STORYBOOK_BASE = 'https://csa-italy.github.io/havas-ui/?path=/story/';
+const STORYBOOK_BASE = 'https://example.github.io/ui-kit/?path=/story/';
 
 /**
  * @param {string} srcGlob

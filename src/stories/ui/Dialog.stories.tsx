@@ -64,7 +64,7 @@ export const Default: Story = {
         <DialogHeader>
           <DialogTitle>Modifica profilo</DialogTitle>
           <DialogDescription>
-            Rivedi i tuoi dati base di Havas e conferma per aggiornare il database.
+            Rivedi i tuoi dati base e conferma per aggiornare il database.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -135,7 +135,7 @@ export const OpenCloseInteraction: Story = {
         <DialogHeader>
           <DialogTitle>Modifica profilo</DialogTitle>
           <DialogDescription>
-            Rivedi i tuoi dati base di Havas e conferma per aggiornare il database.
+            Rivedi i tuoi dati base e conferma per aggiornare il database.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">

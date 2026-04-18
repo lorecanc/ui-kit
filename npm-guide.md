@@ -1,4 +1,4 @@
-# Publishing @csa-italy/havas-ui
+# Publishing @ui-kit/ui-kit
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ Or create `~/.npmrc` globally:
 
 In their project root:
 ```
-@csa-italy:registry=https://npm.pkg.github.com
+@ui-kit:registry=https://npm.pkg.github.com
 ```
 
 ## Publishing a New Version
@@ -58,11 +58,11 @@ npm publish --access public
 
 ```bash
 # Install
-npm install @csa-italy/havas-ui
+npm install @ui-kit/ui-kit
 
 # In your code
-import { Button } from '@csa-italy/havas-ui'
-import '@csa-italy/havas-ui/theme.css' // or import in CSS
+import { Button } from '@ui-kit/ui-kit'
+import '@ui-kit/ui-kit/theme.css' // or import in CSS
 ```
 
 ## Troubleshooting

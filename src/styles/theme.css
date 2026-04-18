@@ -10,39 +10,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: 'Geist Variable', sans-serif;
-  --font-display: var(--font-display);
-  --font-condensed: var(--font-condensed);
-
-  --color-kind-red: var(--c-red);
-  --color-kind-black: var(--c-black);
-
-  /* Havas Tokens */
-  --c-red: #e60000;
-  --c-white: #ffffff;
-  --c-black: #000000;
-  --c-pale-pink: #ffdcdc;
-  --c-dark-red: #640000;
-  --c-teal: #008596;
-  --c-soft-pink: #ff9696;
-  --c-maroon: #280000;
-  --c-cyan: #69ebf8;
-  --c-deep-teal: #145566;
-  --c-midnight: #001c32;
-
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
 
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -61,6 +28,21 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
 
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -70,171 +52,106 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-/* --- FONTS --- */
-@font-face {
-  font-family: "Baikal Normal";
-  src: url("/fonts/BaikalNormal-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Baikal Normal";
-  src: url("/fonts/BaikalNormal-RegularItalic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Baikal Normal";
-  src: url("/fonts/BaikalNormal-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Baikal Normal";
-  src: url("/fonts/BaikalNormal-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Baikal Normal";
-  src: url("/fonts/BaikalNormal-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Baikal Exp";
-  src: url("/fonts/BaikalExp-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Baikal ExtraCond";
-  src: url("/fonts/BaikalExtraCond-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* --- HAVAS DESIGN SYSTEM --- */
+/* --- DESIGN TOKENS --- */
 :root {
   /* Typography */
-  --font-sans: "Baikal Normal", sans-serif;
-  --font-display: "Baikal Exp", sans-serif;
-  --font-condensed: "Baikal ExtraCond", sans-serif;
-  
-  /* Primitives */
-  --c-red: #e60000;
-  --c-white: #ffffff;
-  --c-black: #000000;
-  --c-pale-pink: #ffdcdc;
-  --c-dark-red: #640000;
-  --c-teal: #008596;
-  --c-soft-pink: #ff9696;
-  --c-maroon: #280000;
-  --c-cyan: #69ebf8;
-  --c-deep-teal: #145566;
-  --c-midnight: #001c32;
+  --font-sans: "Geist Variable", sans-serif;
 
-  /* ShadCN Mappings (Light Mode) */
-  --background: var(--c-white);
-  --foreground: var(--c-black);
+  /* Semantic Colors (Light Mode) */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 5.9% 10%);
 
-  --card: var(--c-white);
-  --card-foreground: var(--c-black);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 5.9% 10%);
 
-  --popover: var(--c-white);
-  --popover-foreground: var(--c-black);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 5.9% 10%);
 
-  --primary: var(--c-red);
-  --primary-foreground: var(--c-white);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
 
-  --secondary: #e4e4e7;
-  --secondary-foreground: var(--c-black);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
 
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.7% 46.1%);
 
-  --accent: #f4f4f5;
-  --accent-foreground: var(--c-red);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
 
-  --destructive: var(--c-red);
-  --destructive-foreground: var(--c-white);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
 
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: var(--c-red);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(240 5.9% 10%);
 
   --radius: 0.625rem;
 
   /* Sidebar (Light) */
-  --sidebar: var(--c-white);
-  --sidebar-foreground: var(--c-black);
-  --sidebar-primary: var(--c-red);
-  --sidebar-primary-foreground: var(--c-white);
-  --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: var(--c-black);
-  --sidebar-border: #e4e4e7;
-  --sidebar-ring: var(--c-red);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(240 5.9% 10%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(240 5.9% 90%);
+  --sidebar-ring: hsl(240 5.9% 10%);
 
   /* Charts (Light) */
-  --chart-1: var(--c-red);
-  --chart-2: var(--c-teal);
-  --chart-3: var(--c-midnight);
-  --chart-4: var(--c-soft-pink);
-  --chart-5: var(--c-deep-teal);
+  --chart-1: hsl(217.2 91.2% 59.8%);
+  --chart-2: hsl(217.2 91.2% 69.8%);
+  --chart-3: hsl(142.1 76.2% 36.3%);
+  --chart-4: hsl(38 92% 50%);
+  --chart-5: hsl(330 81.2% 60%);
 }
 
 .dark {
-  /* ShadCN Mappings (Dark Mode) */
-  --background: var(--c-black);
-  --foreground: var(--c-white);
+  /* Semantic Colors (Dark Mode) */
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
 
-  --card: #0a0a0a;
-  --card-foreground: var(--c-white);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
 
-  --popover: #0a0a0a;
-  --popover-foreground: var(--c-white);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
 
-  --primary: var(--c-red);
-  --primary-foreground: var(--c-white);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(240 5.9% 10%);
 
-  --secondary: #1a1a1a;
-  --secondary-foreground: var(--c-white);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(0 0% 98%);
 
-  --muted: #1a1a1a;
-  --muted-foreground: #a1a1aa;
+  --muted: hsl(240 3.7% 15.9%);
+  --muted-foreground: hsl(240 5% 64.9%);
 
-  --accent: #1a1a1a;
-  --accent-foreground: var(--c-white);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
 
-  --destructive: #ef4444; /* Slightly lighter red for readability on dark background per guidelines */
-  --destructive-foreground: var(--c-white);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
 
-  --border: #1a1a1a;
-  --input: #1a1a1a;
-  --ring: var(--c-red);
+  --border: hsl(240 3.7% 15.9%);
+  --input: hsl(240 3.7% 15.9%);
+  --ring: hsl(240 4.9% 83.9%);
 
   /* Sidebar (Dark) */
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: var(--c-white);
-  --sidebar-primary: var(--c-red);
-  --sidebar-primary-foreground: var(--c-white);
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: var(--c-white);
-  --sidebar-border: #1a1a1a;
-  --sidebar-ring: var(--c-red);
+  --sidebar: hsl(0 0% 3.9%);
+  --sidebar-foreground: hsl(0 0% 98%);
+  --sidebar-primary: hsl(0 0% 98%);
+  --sidebar-primary-foreground: hsl(240 5.9% 10%);
+  --sidebar-accent: hsl(240 3.7% 15.9%);
+  --sidebar-accent-foreground: hsl(0 0% 98%);
+  --sidebar-border: hsl(240 3.7% 15.9%);
+  --sidebar-ring: hsl(240 4.9% 83.9%);
 
   /* Charts (Dark) */
-  --chart-1: var(--c-red);
-  --chart-2: var(--c-cyan);
-  --chart-3: var(--c-pale-pink);
-  --chart-4: var(--c-teal);
-  --chart-5: var(--c-soft-pink);
+  --chart-1: hsl(217.2 91.2% 69.8%);
+  --chart-2: hsl(217.2 91.2% 79.8%);
+  --chart-3: hsl(142.1 76.2% 46.3%);
+  --chart-4: hsl(38 92% 60%);
+  --chart-5: hsl(330 81.2% 70%);
 }
 
 @layer base {
@@ -247,7 +164,6 @@
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
 
-  /* Global Cursor Rules */
   button,
   [role="button"],
   [type="button"],
@@ -255,92 +171,8 @@
   [type="reset"] {
     cursor: pointer;
   }
-  
+
   html {
     @apply font-sans;
   }
-}
-
-/* === HAVAS CONTEXT UTILITIES === */
-
-/* --- BASE COLORS --- */
-
-/* 1. Red Background */
-.bg-base-red {
-  background-color: var(--c-red);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-black);
-  --fg-3: var(--c-pale-pink);
-}
-
-/* 2. Black Background */
-.bg-base-black {
-  background-color: var(--c-black);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-red);
-  --fg-3: var(--c-pale-pink);
-}
-
-/* 3. White Background */
-.bg-base-white {
-  background-color: var(--c-white);
-  color: var(--c-black);
-  --fg-1: var(--c-black);
-  --fg-2: var(--c-red);
-  --fg-3: var(--c-dark-red);
-  --fg-4: var(--c-teal);
-}
-
-/* --- SUPPORTING COLORS --- */
-
-/* 1. Soft Pink Background */
-.bg-supp-soft-pink {
-  background-color: var(--c-soft-pink);
-  color: var(--c-black); /* Black è più leggibile qui come default */
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-black);
-}
-
-/* 2. Dark Red Background */
-.bg-supp-dark-red {
-  background-color: var(--c-dark-red);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-pale-pink);
-}
-
-/* 3. Deep Maroon Background */
-.bg-supp-maroon {
-  background-color: var(--c-maroon);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-pale-pink);
-  --fg-3: var(--c-cyan);
-}
-
-/* 4. Teal Background */
-.bg-supp-teal {
-  background-color: var(--c-teal);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-black);
-}
-
-/* 5. Deep Teal Background */
-.bg-supp-deep-teal {
-  background-color: var(--c-deep-teal);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-cyan);
-}
-
-/* 6. Midnight Blue Background */
-.bg-supp-midnight {
-  background-color: var(--c-midnight);
-  color: var(--c-white);
-  --fg-1: var(--c-white);
-  --fg-2: var(--c-pale-pink);
-  --fg-3: var(--c-cyan);
 }

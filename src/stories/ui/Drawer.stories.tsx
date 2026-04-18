@@ -69,7 +69,7 @@ export const Default: Story = {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="drawer-email">Email</Label>
-            <Input id="drawer-email" defaultValue="lorenzo@havas.com" />
+            <Input id="drawer-email" defaultValue="lorenzo@example.com" />
           </div>
         </div>
         <DrawerFooter>
@@ -131,7 +131,7 @@ export const Right: Story = {
           </DrawerDescription>
         </DrawerHeader>
         <div className="flex flex-col gap-3 p-4 text-sm">
-          <div><span className="font-medium">Nome:</span> Havas UI Kit</div>
+          <div><span className="font-medium">Nome:</span> UI Kit</div>
           <div><span className="font-medium">Stato:</span> In sviluppo</div>
           <div><span className="font-medium">Priorità:</span> Alta</div>
           <div><span className="font-medium">Scadenza:</span> 15 Aprile 2026</div>

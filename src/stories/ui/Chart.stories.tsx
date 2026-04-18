@@ -36,7 +36,7 @@ const meta: Meta<typeof ChartContainer> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div className="w-full max-w-2xl p-6 bg-base-white rounded-xl shadow-sm border border-border">
+      <div className="w-full max-w-2xl p-6 bg-background rounded-xl shadow-sm border border-border">
         <Story />
       </div>
     ),
@@ -107,7 +107,7 @@ const pieChartConfig = {
 export const AreaChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Area Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Area Chart</div>
       <ChartContainer config={chartConfig} className="min-h-[300px] w-full">
         <AreaChart accessibilityLayer data={chartData} margin={{ left: 12, right: 12 }}>
           <CartesianGrid vertical={false} />
@@ -145,7 +145,7 @@ export const AreaChartExample: Story = {
 export const BarChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Bar Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Bar Chart</div>
       <ChartContainer config={chartConfig} className="min-h-[300px] w-full">
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
@@ -170,7 +170,7 @@ export const BarChartExample: Story = {
 export const LineChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Line Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Line Chart</div>
       <ChartContainer config={chartConfig} className="min-h-[300px] w-full">
         <LineChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
@@ -206,7 +206,7 @@ export const LineChartExample: Story = {
 export const PieChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Pie Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Pie Chart</div>
       <ChartContainer
         config={pieChartConfig}
         className="min-h-[300px] w-full"
@@ -230,7 +230,7 @@ export const PieChartExample: Story = {
 export const RadarChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Radar Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Radar Chart</div>
       <ChartContainer
         config={chartConfig}
         className="min-h-[300px] w-full"
@@ -261,7 +261,7 @@ export const RadarChartExample: Story = {
 export const RadialChartExample: Story = {
   render: () => (
     <div className="space-y-4">
-      <div className="text-center font-display text-xl text-foreground">Havas Radial Chart</div>
+      <div className="text-center font-sans text-xl text-foreground">Radial Chart</div>
       <ChartContainer
         config={pieChartConfig}
         className="min-h-[300px] w-full"

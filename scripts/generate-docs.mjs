@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 
-const STORYBOOK_BASE = 'https://csa-italy.github.io/havas-ui/?path=/story/';
+const STORYBOOK_BASE = 'https://example.github.io/ui-kit/?path=/story/';
 
 const project = new Project({
   tsConfigFilePath: path.join(ROOT_DIR, 'tsconfig.app.json'),
@@ -180,7 +180,7 @@ function sanitizeType(type) {
 
 function generateMarkdown(components) {
   const lines = [
-    `# CSA Italy Havas UI — Component Library Tour`,
+    `# UI Kit — Component Library Tour`,
     ``,
     `> Generato tramite analisi statica del codice. Non modificare manualmente.`,
     `> Ultimo aggiornamento: ${new Date().toISOString().split('T')[0]}`,
@@ -188,7 +188,7 @@ function generateMarkdown(components) {
     `## Overview`,
     ``,
     `Questa libreria fornisce componenti UI riutilizzabili basati su shadcn/ui, Radix UI e Tailwind CSS.`,
-    `Importa i componenti da \`@csa-italy/havas-ui\`.`,
+    `Importa i componenti da \`@ui-kit/ui-kit\`.`,
     ``,
     `## Available Components`,
     ``,
@@ -236,7 +236,7 @@ function generateMarkdown(components) {
       `**Usage:**`,
       ``,
       `\`\`\`tsx`,
-      `import { ${comp.name} } from '@csa-italy/havas-ui'`,
+      `import { ${comp.name} } from '@ui-kit/ui-kit'`,
       ``,
       generateUsageExample(comp),
       `\`\`\``,

@@ -38,11 +38,23 @@ const conversionData = [
   { step: "Subscription", visitors: 1100 },
 ];
 
+const sessionsData = [
+  { month: "January", organic: 120, paid: 45, referral: 21 },
+  { month: "February", organic: 180, paid: 95, referral: 30 },
+  { month: "March", organic: 150, paid: 70, referral: 47 },
+  { month: "April", organic: 60, paid: 110, referral: 20 },
+  { month: "May", organic: 130, paid: 80, referral: 79 },
+  { month: "June", organic: 140, paid: 85, referral: 60 },
+];
+
 const chartConfig = {
   desktop: { label: "Desktop", color: "var(--chart-1)" },
   mobile: { label: "Mobile", color: "var(--chart-2)" },
   tablet: { label: "Tablet", color: "var(--chart-3)" },
   visitors: { label: "Visitors", color: "var(--chart-4)" },
+  organic: { label: "Organic", color: "var(--chart-1)" },
+  paid: { label: "Paid", color: "var(--chart-2)" },
+  referral: { label: "Referral", color: "var(--chart-3)" },
 } satisfies ChartConfig;
 
 export function AnalysisFlowPage() {
@@ -63,31 +75,54 @@ export function AnalysisFlowPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Chart Area spanning 2 columns */}
-        <Card className="lg:col-span-2 flex flex-col">
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <div>
-                <CardTitle className="text-lg">Engagement Overview</CardTitle>
-                <CardDescription>Multi-device engagement across all channels.</CardDescription>
+        <div className="lg:col-span-2 flex flex-col gap-6">
+          <Card className="flex-1 min-h-0 flex flex-col">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="text-lg">Engagement Overview</CardTitle>
+                  <CardDescription>Multi-device engagement across all channels.</CardDescription>
+                </div>
+                <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">Real-time <span className="ml-1.5 flex h-2 w-2 rounded-full bg-primary animate-pulse"></span></Badge>
               </div>
-              <Badge variant="outline" className="bg-primary/5 text-primary border-primary/20">Real-time <span className="ml-1.5 flex h-2 w-2 rounded-full bg-primary animate-pulse"></span></Badge>
-            </div>
-          </CardHeader>
-          <CardContent className="flex-1">
-            <ChartContainer config={chartConfig} className="h-full min-h-[350px] w-full">
-              <BarChart data={chartData} margin={{ left: 12, right: 12, top: 20 }}>
-                <CartesianGrid vertical={false} strokeDasharray="3 3" />
-                <XAxis dataKey="month" tickLine={false} tickMargin={10} axisLine={false} tickFormatter={(v) => v.slice(0, 3)} />
-                <YAxis tickLine={false} axisLine={false} tickFormatter={(value) => `${value}`} />
-                <ChartTooltip content={<ChartTooltipContent />} />
-                <ChartLegend content={<ChartLegendContent />} />
-                <Bar dataKey="desktop" fill="var(--color-desktop)" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="mobile" fill="var(--color-mobile)" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="tablet" fill="var(--color-tablet)" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ChartContainer>
-          </CardContent>
-        </Card>
+            </CardHeader>
+            <CardContent className="flex-1 min-h-0">
+              <ChartContainer config={chartConfig} className="aspect-auto h-full w-full">
+                <BarChart data={chartData} margin={{ left: 12, right: 12, top: 20 }}>
+                  <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                  <XAxis dataKey="month" tickLine={false} tickMargin={10} axisLine={false} tickFormatter={(v) => v.slice(0, 3)} />
+                  <YAxis tickLine={false} axisLine={false} tickFormatter={(value) => `${value}`} />
+                  <ChartTooltip content={<ChartTooltipContent />} />
+                  <ChartLegend content={<ChartLegendContent />} />
+                  <Bar dataKey="desktop" fill="var(--color-desktop)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="mobile" fill="var(--color-mobile)" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="tablet" fill="var(--color-tablet)" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          <Card className="flex-1 min-h-0 flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-lg">Sessions by Source</CardTitle>
+              <CardDescription>Traffic breakdown by acquisition channel.</CardDescription>
+            </CardHeader>
+            <CardContent className="flex-1 min-h-0">
+              <ChartContainer config={chartConfig} className="aspect-auto h-full w-full">
+                <LineChart data={sessionsData} margin={{ left: 12, right: 12, top: 20 }}>
+                  <CartesianGrid vertical={false} strokeDasharray="3 3" />
+                  <XAxis dataKey="month" tickLine={false} tickMargin={10} axisLine={false} tickFormatter={(v) => v.slice(0, 3)} />
+                  <YAxis tickLine={false} axisLine={false} tickFormatter={(value) => `${value}`} />
+                  <ChartTooltip content={<ChartTooltipContent />} />
+                  <ChartLegend content={<ChartLegendContent />} />
+                  <Line type="monotone" dataKey="organic" stroke="var(--color-organic)" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+                  <Line type="monotone" dataKey="paid" stroke="var(--color-paid)" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+                  <Line type="monotone" dataKey="referral" stroke="var(--color-referral)" strokeWidth={2} dot={{ r: 3 }} activeDot={{ r: 5 }} />
+                </LineChart>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Actionable Insights Panel */}
         <Card className="flex flex-col border-primary/10 shadow-sm bg-gradient-to-br from-background to-muted/20">

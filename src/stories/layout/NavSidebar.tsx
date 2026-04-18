@@ -71,7 +71,7 @@ export function NavSidebar({ items = defaultNavItems, currentPath, brandName = "
                   <PanelLeftIcon className="absolute size-4 opacity-0 group-data-[collapsible=icon]:group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-sidebar-primary" />
                 </ClickableLogo>
                 <div className="grid text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                  <span className="truncate font-display font-medium">{brandName}</span>
+                  <span className="truncate font-sans font-medium">{brandName}</span>
                 </div>
               </div>
               <div className="group-data-[collapsible=icon]:hidden shrink-0">

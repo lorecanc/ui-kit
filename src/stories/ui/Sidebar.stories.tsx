@@ -81,7 +81,7 @@ function SidebarLayout({ defaultOpen = true }: { defaultOpen?: boolean }) {
                       <PanelLeftIcon className="absolute size-4 opacity-0 group-data-[collapsible=icon]:group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-primary-foreground" />
                     </ClickableLogo>
                     <div className="grid text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                      <span className="truncate font-display text-xl">Havas UI</span>
+                      <span className="truncate font-sans text-xl">UI Kit</span>
                     </div>
                   </div>
                   <div className="group-data-[collapsible=icon]:hidden shrink-0">
@@ -192,7 +192,7 @@ export const RightSide: Story = {
                       <PanelLeftIcon className="absolute size-4 opacity-0 group-data-[collapsible=icon]:group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-primary-foreground" />
                     </ClickableLogo>
                     <div className="grid text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                      <span className="truncate font-display text-xl">Havas UI</span>
+                      <span className="truncate font-sans text-xl">UI Kit</span>
                     </div>
                   </div>
                   <div className="group-data-[collapsible=icon]:hidden shrink-0">
@@ -298,7 +298,7 @@ export const Floating: Story = {
                       <PanelLeftIcon className="absolute size-4 opacity-0 group-data-[collapsible=icon]:group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-primary-foreground" />
                     </ClickableLogo>
                     <div className="grid text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                      <span className="truncate font-display text-xl">Havas UI</span>
+                      <span className="truncate font-sans text-xl">UI Kit</span>
                     </div>
                   </div>
                   <div className="group-data-[collapsible=icon]:hidden shrink-0">

@@ -86,8 +86,8 @@ export const Outline: Story = {
 };
 
 /**
- * **Destructive**: Usato esclusivamente per azioni irreversibili o che eliminano dati 
- * (es. cancellare un record). Richiede l'uso attento del colore rosso Havas.
+ * **Destructive**: Usato esclusivamente per azioni irreversibili o che eliminano dati
+ * (es. cancellare un record). Richiede l'uso attento del colore destructive.
  */
 export const Destructive: Story = {
   args: { variant: 'destructive', children: 'Delete Item' },

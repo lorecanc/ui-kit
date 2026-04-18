@@ -35,7 +35,7 @@ export function generateComponentPage(model) {
   lines.push('## 💻 Usage');
   lines.push('');
   lines.push('```tsx');
-  lines.push(`import { ${model.name} } from '@csa-italy/havas-ui'`);
+  lines.push(`import { ${model.name} } from '@ui-kit/ui-kit'`);
   lines.push('');
   lines.push(model.usageExample || `// TODO: aggiungere @example nel JSDoc del componente`);
   lines.push('```');
@@ -122,7 +122,7 @@ export function generateSubComponentSection(sub) {
 export function generateIndexPage(models) {
   const lines = [];
 
-  lines.push('# 📚 Havas UI — Library Tour');
+  lines.push('# 📚 UI Kit — Library Tour');
   lines.push('');
   lines.push('> Documentazione autogenerata. Ultima build: ' + new Date().toISOString());
   lines.push('> Script: `npm run docs`');

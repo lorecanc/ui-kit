@@ -20,7 +20,7 @@ const WelcomePage = () => {
     <div className="w-full h-full overflow-auto py-8">
     <div className="flex flex-col gap-8 max-w-4xl mx-auto px-8">
       <div className="text-center space-y-4">
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0 }}>Havas UI</h1>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', margin: 0 }}>UI Kit</h1>
         <p style={{ fontSize: '1.25rem', color: '#666' }}>Component library built on shadcn/ui + Tailwind CSS v4</p>
         <div className="flex gap-2 justify-center">
           <Badge variant="outline">shadcn/ui</Badge>
@@ -38,8 +38,8 @@ const WelcomePage = () => {
         </TabsList>
         <TabsContent value="components" className="space-y-4 pt-4">
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Component Showcase</h2>
-          <p>Explore the building blocks of Havas UI. Each component is designed to be accessible, themeable, and production-ready.</p>
-          
+          <p>Explore the building blocks of UI Kit. Each component is designed to be accessible, themeable, and production-ready.</p>
+
           <Card>
             <CardHeader>
               <CardTitle>Buttons</CardTitle>
@@ -97,76 +97,7 @@ const WelcomePage = () => {
 
         <TabsContent value="design-tokens" className="space-y-6 pt-4">
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Design Tokens</h2>
-          <p>The foundation of Havas UI's visual language — all primitives and semantic mappings.</p>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Havas Brand Colors</CardTitle>
-              <CardDescription>All 11 primitives from the design system</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
-                <h4 style={{ fontSize: '0.875rem', fontWeight: 600, marginBottom: '0.75rem', color: '#666' }}>
-                  Base Colors
-                </h4>
-                <div className="grid grid-cols-3 gap-4">
-                  {[
-                    { name: 'Red', token: '--c-red', hex: '#e60000' },
-                    { name: 'Black', token: '--c-black', hex: '#000000' },
-                    { name: 'White', token: '--c-white', hex: '#ffffff', border: '1px solid #e4e4e7' },
-                  ].map((color) => (
-                    <div key={color.token} className="flex flex-col items-center gap-2">
-                      <div
-                        style={{
-                          width: '80px',
-                          height: '80px',
-                          backgroundColor: color.hex,
-                          borderRadius: '12px',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                          border: color.border || 'none',
-                        }}
-                      />
-                      <span style={{ fontSize: '0.875rem', fontWeight: 500 }}>{color.name}</span>
-                      <code style={{ fontSize: '0.7rem', color: '#666' }}>{color.hex}</code>
-                      <code style={{ fontSize: '0.65rem', color: '#999' }}>{color.token}</code>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h4 style={{ fontSize: '0.875rem', fontWeight: 600, marginBottom: '0.75rem', color: '#666' }}>
-                  Supporting Colors
-                </h4>
-                <div className="grid grid-cols-4 gap-4">
-                  {[
-                    { name: 'Pale Pink', token: '--c-pale-pink', hex: '#ffdcdc' },
-                    { name: 'Dark Red', token: '--c-dark-red', hex: '#640000' },
-                    { name: 'Teal', token: '--c-teal', hex: '#008596' },
-                    { name: 'Soft Pink', token: '--c-soft-pink', hex: '#ff9696' },
-                    { name: 'Maroon', token: '--c-maroon', hex: '#280000' },
-                    { name: 'Cyan', token: '--c-cyan', hex: '#69ebf8' },
-                    { name: 'Deep Teal', token: '--c-deep-teal', hex: '#145566' },
-                    { name: 'Midnight', token: '--c-midnight', hex: '#001c32' },
-                  ].map((color) => (
-                    <div key={color.token} className="flex flex-col items-center gap-2">
-                      <div
-                        style={{
-                          width: '60px',
-                          height: '60px',
-                          backgroundColor: color.hex,
-                          borderRadius: '10px',
-                          boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-                        }}
-                      />
-                      <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>{color.name}</span>
-                      <code style={{ fontSize: '0.65rem', color: '#666' }}>{color.hex}</code>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <p>The foundation of UI Kit's visual language — semantic color mappings for light/dark modes.</p>
 
           <Card>
             <CardHeader>
@@ -181,16 +112,16 @@ const WelcomePage = () => {
                   </h4>
                   <div className="space-y-3">
                     {[
-                      { token: '--background', primitive: '--c-white', hex: '#ffffff' },
-                      { token: '--foreground', primitive: '--c-black', hex: '#000000' },
-                      { token: '--primary', primitive: '--c-red', hex: '#e60000' },
-                      { token: '--primary-foreground', primitive: '--c-white', hex: '#ffffff' },
-                      { token: '--secondary', primitive: '#e4e4e7', hex: '#e4e4e7' },
-                      { token: '--muted', primitive: '#f4f4f5', hex: '#f4f4f5' },
-                      { token: '--accent', primitive: '#f4f4f5', hex: '#f4f4f5' },
-                      { token: '--destructive', primitive: '--c-red', hex: '#e60000' },
-                      { token: '--border', primitive: '#e4e4e7', hex: '#e4e4e7' },
-                      { token: '--ring', primitive: '--c-red', hex: '#e60000' },
+                      { token: '--background', hex: 'hsl(0 0% 100%)' },
+                      { token: '--foreground', hex: 'hsl(240 5.9% 10%)' },
+                      { token: '--primary', hex: 'hsl(240 5.9% 10%)' },
+                      { token: '--primary-foreground', hex: 'hsl(0 0% 98%)' },
+                      { token: '--secondary', hex: 'hsl(240 4.8% 95.9%)' },
+                      { token: '--muted', hex: 'hsl(240 4.8% 95.9%)' },
+                      { token: '--accent', hex: 'hsl(240 4.8% 95.9%)' },
+                      { token: '--destructive', hex: 'hsl(0 84.2% 60.2%)' },
+                      { token: '--border', hex: 'hsl(240 5.9% 90%)' },
+                      { token: '--ring', hex: 'hsl(240 5.9% 10%)' },
                     ].map((item) => (
                       <div key={item.token} className="flex items-center gap-3">
                         <div
@@ -199,12 +130,12 @@ const WelcomePage = () => {
                             height: '32px',
                             backgroundColor: item.hex,
                             borderRadius: '6px',
-                            border: item.hex === '#ffffff' || item.hex === '#f4f4f5' ? '1px solid #e4e4e7' : 'none',
+                            border: item.hex.includes('100') ? '1px solid #e4e4e7' : 'none',
                           }}
                         />
                         <div className="flex flex-col">
                           <code style={{ fontSize: '0.75rem', fontWeight: 500 }}>{item.token}</code>
-                          <code style={{ fontSize: '0.65rem', color: '#999' }}>{item.primitive}</code>
+                          <code style={{ fontSize: '0.65rem', color: '#999' }}>{item.hex}</code>
                         </div>
                       </div>
                     ))}
@@ -217,16 +148,16 @@ const WelcomePage = () => {
                   </h4>
                   <div className="space-y-3">
                     {[
-                      { token: '--background', primitive: '--c-black', hex: '#000000' },
-                      { token: '--foreground', primitive: '--c-white', hex: '#ffffff' },
-                      { token: '--primary', primitive: '--c-red', hex: '#e60000' },
-                      { token: '--primary-foreground', primitive: '--c-white', hex: '#ffffff' },
-                      { token: '--secondary', primitive: '#1a1a1a', hex: '#1a1a1a' },
-                      { token: '--muted', primitive: '#1a1a1a', hex: '#1a1a1a' },
-                      { token: '--accent', primitive: '#1a1a1a', hex: '#1a1a1a' },
-                      { token: '--destructive', primitive: '#ef4444', hex: '#ef4444' },
-                      { token: '--border', primitive: '#1a1a1a', hex: '#1a1a1a' },
-                      { token: '--ring', primitive: '--c-red', hex: '#e60000' },
+                      { token: '--background', hex: 'hsl(0 0% 3.9%)' },
+                      { token: '--foreground', hex: 'hsl(0 0% 98%)' },
+                      { token: '--primary', hex: 'hsl(0 0% 98%)' },
+                      { token: '--primary-foreground', hex: 'hsl(240 5.9% 10%)' },
+                      { token: '--secondary', hex: 'hsl(240 3.7% 15.9%)' },
+                      { token: '--muted', hex: 'hsl(240 3.7% 15.9%)' },
+                      { token: '--accent', hex: 'hsl(240 3.7% 15.9%)' },
+                      { token: '--destructive', hex: 'hsl(0 62.8% 30.6%)' },
+                      { token: '--border', hex: 'hsl(240 3.7% 15.9%)' },
+                      { token: '--ring', hex: 'hsl(240 4.9% 83.9%)' },
                     ].map((item) => (
                       <div key={item.token} className="flex items-center gap-3">
                         <div
@@ -235,12 +166,12 @@ const WelcomePage = () => {
                             height: '32px',
                             backgroundColor: item.hex,
                             borderRadius: '6px',
-                            border: item.hex === '#ffffff' ? '1px solid #333' : 'none',
+                            border: item.hex.includes('98') && item.hex.includes('100') ? '1px solid #333' : 'none',
                           }}
                         />
                         <div className="flex flex-col">
                           <code style={{ fontSize: '0.75rem', fontWeight: 500 }}>{item.token}</code>
-                          <code style={{ fontSize: '0.65rem', color: '#999' }}>{item.primitive}</code>
+                          <code style={{ fontSize: '0.65rem', color: '#999' }}>{item.hex}</code>
                         </div>
                       </div>
                     ))}
@@ -258,51 +189,19 @@ const WelcomePage = () => {
             <CardContent className="space-y-6">
               <div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                  <h4 style={{ fontSize: '0.875rem', fontWeight: 600 }}>Baikal Normal</h4>
+                  <h4 style={{ fontSize: '0.875rem', fontWeight: 600 }}>Geist Variable</h4>
                   <code style={{ fontSize: '0.7rem', color: '#666' }}>font-sans</code>
                   <Badge variant="outline" style={{ fontSize: '0.65rem' }}>Sans</Badge>
                 </div>
-                <div className="space-y-2 pl-4 border-l-2 border-[#e60000]">
-                  <p style={{ fontFamily: '"Baikal Normal", sans-serif', fontWeight: 400, fontSize: '1rem' }}>
+                <div className="space-y-2 pl-4 border-l-2 border-primary">
+                  <p style={{ fontFamily: '"Geist Variable", sans-serif', fontWeight: 400, fontSize: '1rem' }}>
                     Regular 400 — The quick brown fox jumps over the lazy dog
                   </p>
-                  <p style={{ fontFamily: '"Baikal Normal", sans-serif', fontWeight: 400, fontStyle: 'italic', fontSize: '1rem' }}>
-                    Regular Italic 400 — The quick brown fox jumps over the lazy dog
-                  </p>
-                  <p style={{ fontFamily: '"Baikal Normal", sans-serif', fontWeight: 500, fontSize: '1rem' }}>
+                  <p style={{ fontFamily: '"Geist Variable", sans-serif', fontWeight: 500, fontSize: '1rem' }}>
                     Medium 500 — The quick brown fox jumps over the lazy dog
                   </p>
-                  <p style={{ fontFamily: '"Baikal Normal", sans-serif', fontWeight: 600, fontSize: '1rem' }}>
-                    SemiBold 600 — The quick brown fox jumps over the lazy dog
-                  </p>
-                  <p style={{ fontFamily: '"Baikal Normal", sans-serif', fontWeight: 700, fontSize: '1rem' }}>
+                  <p style={{ fontFamily: '"Geist Variable", sans-serif', fontWeight: 700, fontSize: '1rem' }}>
                     Bold 700 — The quick brown fox jumps over the lazy dog
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                  <h4 style={{ fontSize: '0.875rem', fontWeight: 600 }}>Baikal Exp</h4>
-                  <code style={{ fontSize: '0.7rem', color: '#666' }}>font-display</code>
-                  <Badge variant="outline" style={{ fontSize: '0.65rem' }}>Display</Badge>
-                </div>
-                <div className="space-y-2 pl-4 border-l-2 border-[#008596]">
-                  <p style={{ fontFamily: '"Baikal Exp", sans-serif', fontWeight: 500, fontSize: '1.25rem' }}>
-                    Medium 500 — The quick brown fox jumps over the lazy dog
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                  <h4 style={{ fontSize: '0.875rem', fontWeight: 600 }}>Baikal ExtraCond</h4>
-                  <code style={{ fontSize: '0.7rem', color: '#666' }}>font-condensed</code>
-                  <Badge variant="outline" style={{ fontSize: '0.65rem' }}>Condensed</Badge>
-                </div>
-                <div className="space-y-2 pl-4 border-l-2 border-[#001c32]">
-                  <p style={{ fontFamily: '"Baikal ExtraCond", sans-serif', fontWeight: 600, fontSize: '1rem', letterSpacing: '-0.02em' }}>
-                    SemiBold 600 — THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
                   </p>
                 </div>
               </div>
@@ -327,7 +226,7 @@ const WelcomePage = () => {
                 ].map((radius) => (
                   <div key={radius.token} className="flex flex-col items-center gap-3">
                     <div
-                      className="bg-[#e60000] flex items-center justify-center"
+                      className="bg-primary flex items-center justify-center"
                       style={{
                         width: '64px',
                         height: '64px',
@@ -347,14 +246,14 @@ const WelcomePage = () => {
 
         <TabsContent value="getting-started" className="space-y-4 pt-4">
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Getting Started</h2>
-          
+
           <Card>
             <CardHeader>
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
               <pre style={{ backgroundColor: '#f5f5f5', padding: '1rem', borderRadius: '8px', overflow: 'auto' }}>
-{`npm install @csa-italy/havas-ui`}
+{`npm install @ui-kit/ui-kit`}
               </pre>
             </CardContent>
           </Card>
@@ -365,7 +264,7 @@ const WelcomePage = () => {
             </CardHeader>
             <CardContent>
               <pre style={{ backgroundColor: '#f5f5f5', padding: '1rem', borderRadius: '8px', overflow: 'auto' }}>
-{`import { Button, Input, Card } from '@csa-italy/havas-ui'
+{`import { Button, Input, Card } from '@ui-kit/ui-kit'
 
 function MyPage() {
   return (

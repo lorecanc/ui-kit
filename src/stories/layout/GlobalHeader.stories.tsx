@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { GlobalHeader } from '@/components/layout/GlobalHeader';
+import { SidebarProvider } from '@/components/ui/sidebar';
 
 /**
  * ## Overview
@@ -21,9 +22,11 @@ const meta: Meta<typeof GlobalHeader> = {
   },
   decorators: [
     (Story) => (
-      <div className="w-full bg-muted/5">
-        <Story />
-      </div>
+      <SidebarProvider>
+        <div className="w-full bg-muted/5">
+          <Story />
+        </div>
+      </SidebarProvider>
     ),
   ],
   args: {

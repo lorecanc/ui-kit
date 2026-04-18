@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button';
  * Card – Contenitore versatile per raggruppare informazioni e azioni correlate in blocchi distinti.
  * 
  * Il `Card` compone internamente diverse sezioni tipicamente necessarie (header, titolo, contenuto e azioni)
- * mantenendo una struttura visiva coerente con i bordi ad alto contrasto del design system Havas.
+ * mantenendo una struttura visiva coerente con i bordi ad alto contrasto del design system.
  * 
  * ## Esempi di codice pronti da copiare:
  * ```tsx

@@ -7,7 +7,7 @@ import * as React from 'react';
  * ## Overview
  * Calendar – Un componente per la selezione di date singole o intervalli.
  * 
- * Basato su `react-day-picker`, è stilizzato per riflettere l'estetica Havas con bordi precisi e tipografia chiara.
+ * Basato su `react-day-picker`, è stilizzato per riflettere l'estetica del design system con bordi precisi e tipografia chiara.
  *
  * ## Linee guida di UX/UI
  * - **Interazione:** Permette la navigazione tra mesi e anni se configurato.

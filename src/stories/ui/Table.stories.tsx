@@ -15,7 +15,7 @@ import {
  * Table – Componente primario per listare e comparare dataset massivi di collezioni.
  * 
  * Basato su table tag nativi di HTML con container auto-scrolling per il trabocco orizzontale.
- * Strutturato in sottocomponenti, facilita la creazione robusta di griglie di dati in Havas.
+ * Strutturato in sottocomponenti, facilita la creazione robusta di griglie di dati.
  * 
  * ## Esempi di codice pronti da copiare:
  * ```tsx

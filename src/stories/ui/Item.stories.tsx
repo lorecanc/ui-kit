@@ -18,7 +18,7 @@ import { UserIcon, SettingsIcon } from 'lucide-react';
  *   </ItemMedia>
  *   <ItemContent>
  *     <ItemTitle>Mario Rossi</ItemTitle>
- *     <ItemDescription>mario.rossi@havas.com</ItemDescription>
+ *     <ItemDescription>mario.rossi@example.com</ItemDescription>
  *   </ItemContent>
  *   <ItemActions>
  *     <Button variant="ghost" size="icon">...</Button>
@@ -59,7 +59,7 @@ export const Default: Story = {
       </ItemMedia>
       <ItemContent>
         <ItemTitle>Mario Rossi</ItemTitle>
-        <ItemDescription>mario.rossi@havas.com</ItemDescription>
+        <ItemDescription>mario.rossi@example.com</ItemDescription>
       </ItemContent>
       <ItemActions>
         <Button variant="ghost" size="icon" aria-label="Impostazioni">

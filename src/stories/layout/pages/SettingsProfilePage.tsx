@@ -60,7 +60,7 @@ export function SettingsProfilePage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="bio">Bio</Label>
-                <Textarea id="bio" placeholder="Tell us about yourself..." defaultValue="Senior Developer at Havas" />
+                <Textarea id="bio" placeholder="Tell us about yourself..." defaultValue="Senior Developer" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">

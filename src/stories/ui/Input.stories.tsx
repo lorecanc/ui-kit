@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
  * Input – Campo di testo standard per la raccolta di dati.
  * 
  * L'`Input` base cattura testo e password utente, implementando nativamente stili, hover 
- * e animazioni di auto-focus allineati con i field di Havas.
+ * e animazioni di auto-focus allineati con i field standard.
  * 
  * ## Esempi di codice pronti da copiare:
  * ```tsx
@@ -63,7 +63,7 @@ export const Default: Story = {};
 export const Email: Story = {
   args: {
     type: 'email',
-    placeholder: 'mario.rossi@havas.com',
+    placeholder: 'mario.rossi@example.com',
   },
 };
 

@@ -35,7 +35,7 @@ const meta: Meta<typeof Alert> = {
   },
   argTypes: {
     variant: {
-      description: 'Definisce la serietà o la tematica dell\'avviso. Destructive colorerà l\'alert con i toni d\'allarme Havas (rosso scuro).',
+      description: 'Definisce la serietà o la tematica dell\'avviso. Destructive colorerà l\'alert con i toni d\'allarme standard.',
       control: 'select',
       options: ['default', 'destructive'],
     },

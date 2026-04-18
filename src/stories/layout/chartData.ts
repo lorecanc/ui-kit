@@ -36,5 +36,5 @@ export const tableData = [
   { name: "Project Alpha", category: "Technology", metA: "2,300", metB: "450", status: "Active" },
   { name: "Global Campaign", category: "Marketing", metA: "1,150", metB: "320", status: "Completed" },
   { name: "Financial Q3", category: "Finance", metA: "5,400", metB: "890", status: "Pending" },
-  { name: "Havas Pitch", category: "Advertising", metA: "890", metB: "210", status: "Active" },
+  { name: "Project Beta", category: "Advertising", metA: "890", metB: "210", status: "Active" },
 ];
