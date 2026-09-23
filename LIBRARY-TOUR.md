@@ -1,109 +1,113 @@
-# CSA Italy Havas UI — Component Library Tour
+# UI Kit — Component Library Tour
 
 > Generato tramite analisi statica del codice. Non modificare manualmente.
-> Ultimo aggiornamento: 2026-04-15
+> Ultimo aggiornamento: 2026-09-23
 
 ## Overview
 
 Questa libreria fornisce componenti UI riutilizzabili basati su shadcn/ui, Radix UI e Tailwind CSS.
-Importa i componenti da `@csa-italy/havas-design-system`.
+Importa i componenti da `@ui-kit/ui-kit`.
 
 ## Available Components
 
 | Componente | Descrizione | Storybook |
 |------------|-------------|-----------|
-| [Accordion](#accordion) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs) |
-| [AccordionItem](#accordionitem) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs) |
-| [Alert](#alert) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert--docs) |
-| [AlertDialog](#alertdialog) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert-dialog--docs) |
-| [AspectRatio](#aspectratio) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-aspect-ratio--docs) |
-| [Avatar](#avatar) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-avatar--docs) |
-| [Badge](#badge) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-badge--docs) |
-| [Breadcrumb](#breadcrumb) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-breadcrumb--docs) |
-| [Button](#button) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-button--docs) |
-| [ButtonGroup](#buttongroup) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-button-group--docs) |
-| [Calendar](#calendar) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-calendar--docs) |
-| [Card](#card) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-card--docs) |
-| [Carousel](#carousel) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-carousel--docs) |
-| [ChartConfig](#chartconfig) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-chart--docs) |
-| [Checkbox](#checkbox) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-checkbox--docs) |
-| [Collapsible](#collapsible) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-collapsible--docs) |
-| [Combobox](#combobox) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-combobox--docs) |
-| [Command](#command) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-command--docs) |
-| [ContextMenu](#contextmenu) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-context-menu--docs) |
-| [Dialog](#dialog) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-dialog--docs) |
-| [DirectionProvider](#directionprovider) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-direction--docs) |
-| [Drawer](#drawer) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-drawer--docs) |
-| [DropdownMenu](#dropdownmenu) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-dropdown-menu--docs) |
-| [Empty](#empty) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-empty--docs) |
-| [Field](#field) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-field--docs) |
-| [HoverCard](#hovercard) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-hover-card--docs) |
-| [Input](#input) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input--docs) |
-| [InputGroup](#inputgroup) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-group--docs) |
-| [InputOTP](#inputotp) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-otp--docs) |
-| [Item](#item) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-item--docs) |
-| [Kbd](#kbd) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-kbd--docs) |
-| [Label](#label) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-label--docs) |
-| [Menubar](#menubar) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-menubar--docs) |
-| [NativeSelect](#nativeselect) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-native-select--docs) |
-| [NavigationMenu](#navigationmenu) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-navigation-menu--docs) |
-| [Pagination](#pagination) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-pagination--docs) |
-| [Popover](#popover) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-popover--docs) |
-| [Progress](#progress) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-progress--docs) |
-| [RadioGroup](#radiogroup) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-radio-group--docs) |
-| [ResizableHandle](#resizablehandle) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-resizable--docs) |
-| [ScrollArea](#scrollarea) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-scroll-area--docs) |
-| [Select](#select) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-select--docs) |
-| [Separator](#separator) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-separator--docs) |
-| [Sheet](#sheet) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sheet--docs) |
-| [Sidebar](#sidebar) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sidebar--docs) |
-| [Skeleton](#skeleton) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-skeleton--docs) |
-| [Slider](#slider) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-slider--docs) |
-| [Toaster](#toaster) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sonner--docs) |
-| [Spinner](#spinner) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-spinner--docs) |
-| [Switch](#switch) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-switch--docs) |
-| [Table](#table) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-table--docs) |
-| [Tabs](#tabs) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-tabs--docs) |
-| [Textarea](#textarea) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-textarea--docs) |
-| [Toggle](#toggle) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle--docs) |
-| [ToggleGroup](#togglegroup) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle-group--docs) |
-| [Tooltip](#tooltip) | — | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-tooltip--docs) |
+| [Accordion](#accordion) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-accordion--docs) |
+| [Alert](#alert) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-alert--docs) |
+| [AlertDialog](#alertdialog) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-alert-dialog--docs) |
+| [AspectRatio](#aspectratio) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-aspect-ratio--docs) |
+| [Avatar](#avatar) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-avatar--docs) |
+| [Badge](#badge) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-badge--docs) |
+| [Breadcrumb](#breadcrumb) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-breadcrumb--docs) |
+| [Button](#button) | A versatile button component with multiple variants and sizes.
+Supports CVA (Class Variance Authority) for flexible styling and asChild pattern for polymorphic behavior. | [Demo](https://example.github.io/ui-kit/?path=/story/ui-button--docs) |
+| [ButtonGroup](#buttongroup) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-button-group--docs) |
+| [Calendar](#calendar) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-calendar--docs) |
+| [Card](#card) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-card--docs) |
+| [Carousel](#carousel) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-carousel--docs) |
+| [ChartConfig](#chartconfig) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-chart--docs) |
+| [Checkbox](#checkbox) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-checkbox--docs) |
+| [Collapsible](#collapsible) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-collapsible--docs) |
+| [Combobox](#combobox) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-combobox--docs) |
+| [Command](#command) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-command--docs) |
+| [ContextMenu](#contextmenu) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-context-menu--docs) |
+| [Dialog](#dialog) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-dialog--docs) |
+| [DirectionProvider](#directionprovider) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-direction--docs) |
+| [Drawer](#drawer) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-drawer--docs) |
+| [DropdownMenu](#dropdownmenu) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-dropdown-menu--docs) |
+| [Empty](#empty) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-empty--docs) |
+| [Field](#field) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-field--docs) |
+| [HoverCard](#hovercard) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-hover-card--docs) |
+| [Input](#input) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-input--docs) |
+| [InputGroup](#inputgroup) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-input-group--docs) |
+| [InputOTP](#inputotp) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-input-otp--docs) |
+| [Item](#item) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-item--docs) |
+| [Kbd](#kbd) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-kbd--docs) |
+| [Label](#label) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-label--docs) |
+| [Menubar](#menubar) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-menubar--docs) |
+| [NativeSelect](#nativeselect) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-native-select--docs) |
+| [NavigationMenu](#navigationmenu) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-navigation-menu--docs) |
+| [Pagination](#pagination) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-pagination--docs) |
+| [Popover](#popover) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-popover--docs) |
+| [Progress](#progress) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-progress--docs) |
+| [RadioGroup](#radiogroup) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-radio-group--docs) |
+| [ResizableHandle](#resizablehandle) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-resizable--docs) |
+| [ScrollArea](#scrollarea) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-scroll-area--docs) |
+| [Select](#select) | Accessible select component based on Radix UI.
+Exporta sub-components: SelectTrigger, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectGroup, SelectValue. | [Demo](https://example.github.io/ui-kit/?path=/story/ui-select--docs) |
+| [Separator](#separator) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-separator--docs) |
+| [Sheet](#sheet) | A drawer component that slides in from the edge of the screen.
+Based on Radix UI Dialog primitive. | [Demo](https://example.github.io/ui-kit/?path=/story/ui-sheet--docs) |
+| [Sidebar](#sidebar) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-sidebar--docs) |
+| [Skeleton](#skeleton) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-skeleton--docs) |
+| [Slider](#slider) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-slider--docs) |
+| [Toaster](#toaster) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-sonner--docs) |
+| [Spinner](#spinner) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-spinner--docs) |
+| [Switch](#switch) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-switch--docs) |
+| [Table](#table) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-table--docs) |
+| [Tabs](#tabs) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-tabs--docs) |
+| [Textarea](#textarea) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-textarea--docs) |
+| [Toggle](#toggle) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-toggle--docs) |
+| [ToggleGroup](#togglegroup) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-toggle-group--docs) |
+| [Tooltip](#tooltip) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-tooltip--docs) |
 | [GlobalHeader](#globalheader) | GlobalHeader component for the application top navigation.
-Standardizes the display of breadcrumbs, notifications, and user profile. | [Demo](https://csa-italy.github.io/havas-design-system/?path=/story/ui-globalheader--docs) |
+Standardizes the display of breadcrumbs, notifications, and user profile. | [Demo](https://example.github.io/ui-kit/?path=/story/ui-globalheader--docs) |
+| [AppLayout](#applayout) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-applayout--docs) |
+| [AppSidebar](#appsidebar) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-appsidebar--docs) |
+| [AppBreadcrumb](#appbreadcrumb) | — | [Demo](https://example.github.io/ui-kit/?path=/story/ui-appbreadcrumb--docs) |
+| [PageContent](#pagecontent) | PageContent - A consistent content container for page layouts.
+
+Provides consistent padding and max-width for main content areas
+within the AppLayout. Uses the working pattern: `flex flex-col gap-6 p-4 lg:p-6 w-full mx-auto`.
+
+**Installation**
+```bash
+npx shadcn@latest add page-content
+```
+
+**Usage**
+```tsx
+<PageContent>
+  <h1>Page Title</h1>
+  <Card>Content</Card>
+</PageContent>
+``` | [Demo](https://example.github.io/ui-kit/?path=/story/ui-pagecontent--docs) |
 
 ---
 
 ### Accordion
 
 **File:** `src/components/ui/accordion.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-accordion--docs](https://example.github.io/ui-kit/?path=/story/ui-accordion--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Accordion } from '@csa-italy/havas-design-system'
+import { Accordion } from '@ui-kit/ui-kit'
 
 <Accordion />
-```
-
-
----
-
-### AccordionItem
-
-**File:** `src/components/ui/accordion.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-accordion--docs)
-
-_Nessuna descrizione disponibile._
-
-**Usage:**
-
-```tsx
-import { AccordionItem } from '@csa-italy/havas-design-system'
-
-<AccordionItem />
 ```
 
 
@@ -112,14 +116,14 @@ import { AccordionItem } from '@csa-italy/havas-design-system'
 ### Alert
 
 **File:** `src/components/ui/alert.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-alert--docs](https://example.github.io/ui-kit/?path=/story/ui-alert--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Alert } from '@csa-italy/havas-design-system'
+import { Alert } from '@ui-kit/ui-kit'
 
 <Alert />
 ```
@@ -130,14 +134,14 @@ import { Alert } from '@csa-italy/havas-design-system'
 ### AlertDialog
 
 **File:** `src/components/ui/alert-dialog.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert-dialog--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-alert-dialog--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-alert-dialog--docs](https://example.github.io/ui-kit/?path=/story/ui-alert-dialog--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { AlertDialog } from '@csa-italy/havas-design-system'
+import { AlertDialog } from '@ui-kit/ui-kit'
 
 <AlertDialog />
 ```
@@ -148,14 +152,14 @@ import { AlertDialog } from '@csa-italy/havas-design-system'
 ### AspectRatio
 
 **File:** `src/components/ui/aspect-ratio.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-aspect-ratio--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-aspect-ratio--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-aspect-ratio--docs](https://example.github.io/ui-kit/?path=/story/ui-aspect-ratio--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { AspectRatio } from '@csa-italy/havas-design-system'
+import { AspectRatio } from '@ui-kit/ui-kit'
 
 <AspectRatio />
 ```
@@ -166,14 +170,14 @@ import { AspectRatio } from '@csa-italy/havas-design-system'
 ### Avatar
 
 **File:** `src/components/ui/avatar.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-avatar--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-avatar--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-avatar--docs](https://example.github.io/ui-kit/?path=/story/ui-avatar--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Avatar } from '@csa-italy/havas-design-system'
+import { Avatar } from '@ui-kit/ui-kit'
 
 <Avatar />
 ```
@@ -184,14 +188,14 @@ import { Avatar } from '@csa-italy/havas-design-system'
 ### Badge
 
 **File:** `src/components/ui/badge.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-badge--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-badge--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-badge--docs](https://example.github.io/ui-kit/?path=/story/ui-badge--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Badge } from '@csa-italy/havas-design-system'
+import { Badge } from '@ui-kit/ui-kit'
 
 <Badge />
 ```
@@ -202,14 +206,14 @@ import { Badge } from '@csa-italy/havas-design-system'
 ### Breadcrumb
 
 **File:** `src/components/ui/breadcrumb.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-breadcrumb--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-breadcrumb--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-breadcrumb--docs](https://example.github.io/ui-kit/?path=/story/ui-breadcrumb--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Breadcrumb } from '@csa-italy/havas-design-system'
+import { Breadcrumb } from '@ui-kit/ui-kit'
 
 <Breadcrumb />
 ```
@@ -220,14 +224,15 @@ import { Breadcrumb } from '@csa-italy/havas-design-system'
 ### Button
 
 **File:** `src/components/ui/button.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-button--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-button--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-button--docs](https://example.github.io/ui-kit/?path=/story/ui-button--docs)
 
-_Nessuna descrizione disponibile._
+A versatile button component with multiple variants and sizes.
+Supports CVA (Class Variance Authority) for flexible styling and asChild pattern for polymorphic behavior.
 
 **Usage:**
 
 ```tsx
-import { Button } from '@csa-italy/havas-design-system'
+import { Button } from '@ui-kit/ui-kit'
 
 <Button />
 ```
@@ -238,14 +243,14 @@ import { Button } from '@csa-italy/havas-design-system'
 ### ButtonGroup
 
 **File:** `src/components/ui/button-group.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-button-group--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-button-group--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-button-group--docs](https://example.github.io/ui-kit/?path=/story/ui-button-group--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ButtonGroup } from '@csa-italy/havas-design-system'
+import { ButtonGroup } from '@ui-kit/ui-kit'
 
 <ButtonGroup />
 ```
@@ -256,14 +261,14 @@ import { ButtonGroup } from '@csa-italy/havas-design-system'
 ### Calendar
 
 **File:** `src/components/ui/calendar.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-calendar--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-calendar--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-calendar--docs](https://example.github.io/ui-kit/?path=/story/ui-calendar--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Calendar } from '@csa-italy/havas-design-system'
+import { Calendar } from '@ui-kit/ui-kit'
 
 <Calendar />
 ```
@@ -274,14 +279,14 @@ import { Calendar } from '@csa-italy/havas-design-system'
 ### Card
 
 **File:** `src/components/ui/card.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-card--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-card--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-card--docs](https://example.github.io/ui-kit/?path=/story/ui-card--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Card } from '@csa-italy/havas-design-system'
+import { Card } from '@ui-kit/ui-kit'
 
 <Card />
 ```
@@ -292,7 +297,7 @@ import { Card } from '@csa-italy/havas-design-system'
 ### Carousel
 
 **File:** `src/components/ui/carousel.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-carousel--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-carousel--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-carousel--docs](https://example.github.io/ui-kit/?path=/story/ui-carousel--docs)
 
 _Nessuna descrizione disponibile._
 
@@ -308,7 +313,7 @@ _Nessuna descrizione disponibile._
 **Usage:**
 
 ```tsx
-import { Carousel } from '@csa-italy/havas-design-system'
+import { Carousel } from '@ui-kit/ui-kit'
 
 <Carousel />
 ```
@@ -319,14 +324,14 @@ import { Carousel } from '@csa-italy/havas-design-system'
 ### ChartConfig
 
 **File:** `src/components/ui/chart.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-chart--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-chart--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-chart--docs](https://example.github.io/ui-kit/?path=/story/ui-chart--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ChartConfig } from '@csa-italy/havas-design-system'
+import { ChartConfig } from '@ui-kit/ui-kit'
 
 <ChartConfig />
 ```
@@ -337,14 +342,14 @@ import { ChartConfig } from '@csa-italy/havas-design-system'
 ### Checkbox
 
 **File:** `src/components/ui/checkbox.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-checkbox--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-checkbox--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-checkbox--docs](https://example.github.io/ui-kit/?path=/story/ui-checkbox--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Checkbox } from '@csa-italy/havas-design-system'
+import { Checkbox } from '@ui-kit/ui-kit'
 
 <Checkbox />
 ```
@@ -355,14 +360,14 @@ import { Checkbox } from '@csa-italy/havas-design-system'
 ### Collapsible
 
 **File:** `src/components/ui/collapsible.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-collapsible--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-collapsible--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-collapsible--docs](https://example.github.io/ui-kit/?path=/story/ui-collapsible--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Collapsible } from '@csa-italy/havas-design-system'
+import { Collapsible } from '@ui-kit/ui-kit'
 
 <Collapsible />
 ```
@@ -373,14 +378,14 @@ import { Collapsible } from '@csa-italy/havas-design-system'
 ### Combobox
 
 **File:** `src/components/ui/combobox.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-combobox--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-combobox--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-combobox--docs](https://example.github.io/ui-kit/?path=/story/ui-combobox--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Combobox } from '@csa-italy/havas-design-system'
+import { Combobox } from '@ui-kit/ui-kit'
 
 <Combobox />
 ```
@@ -391,14 +396,14 @@ import { Combobox } from '@csa-italy/havas-design-system'
 ### Command
 
 **File:** `src/components/ui/command.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-command--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-command--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-command--docs](https://example.github.io/ui-kit/?path=/story/ui-command--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Command } from '@csa-italy/havas-design-system'
+import { Command } from '@ui-kit/ui-kit'
 
 <Command />
 ```
@@ -409,14 +414,14 @@ import { Command } from '@csa-italy/havas-design-system'
 ### ContextMenu
 
 **File:** `src/components/ui/context-menu.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-context-menu--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-context-menu--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-context-menu--docs](https://example.github.io/ui-kit/?path=/story/ui-context-menu--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ContextMenu } from '@csa-italy/havas-design-system'
+import { ContextMenu } from '@ui-kit/ui-kit'
 
 <ContextMenu />
 ```
@@ -427,14 +432,14 @@ import { ContextMenu } from '@csa-italy/havas-design-system'
 ### Dialog
 
 **File:** `src/components/ui/dialog.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-dialog--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-dialog--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-dialog--docs](https://example.github.io/ui-kit/?path=/story/ui-dialog--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Dialog } from '@csa-italy/havas-design-system'
+import { Dialog } from '@ui-kit/ui-kit'
 
 <Dialog />
 ```
@@ -445,14 +450,14 @@ import { Dialog } from '@csa-italy/havas-design-system'
 ### DirectionProvider
 
 **File:** `src/components/ui/direction.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-direction--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-direction--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-direction--docs](https://example.github.io/ui-kit/?path=/story/ui-direction--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { DirectionProvider } from '@csa-italy/havas-design-system'
+import { DirectionProvider } from '@ui-kit/ui-kit'
 
 <DirectionProvider />
 ```
@@ -463,14 +468,14 @@ import { DirectionProvider } from '@csa-italy/havas-design-system'
 ### Drawer
 
 **File:** `src/components/ui/drawer.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-drawer--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-drawer--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-drawer--docs](https://example.github.io/ui-kit/?path=/story/ui-drawer--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Drawer } from '@csa-italy/havas-design-system'
+import { Drawer } from '@ui-kit/ui-kit'
 
 <Drawer />
 ```
@@ -481,14 +486,14 @@ import { Drawer } from '@csa-italy/havas-design-system'
 ### DropdownMenu
 
 **File:** `src/components/ui/dropdown-menu.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-dropdown-menu--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-dropdown-menu--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-dropdown-menu--docs](https://example.github.io/ui-kit/?path=/story/ui-dropdown-menu--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { DropdownMenu } from '@csa-italy/havas-design-system'
+import { DropdownMenu } from '@ui-kit/ui-kit'
 
 <DropdownMenu />
 ```
@@ -499,14 +504,14 @@ import { DropdownMenu } from '@csa-italy/havas-design-system'
 ### Empty
 
 **File:** `src/components/ui/empty.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-empty--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-empty--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-empty--docs](https://example.github.io/ui-kit/?path=/story/ui-empty--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Empty } from '@csa-italy/havas-design-system'
+import { Empty } from '@ui-kit/ui-kit'
 
 <Empty />
 ```
@@ -517,14 +522,14 @@ import { Empty } from '@csa-italy/havas-design-system'
 ### Field
 
 **File:** `src/components/ui/field.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-field--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-field--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-field--docs](https://example.github.io/ui-kit/?path=/story/ui-field--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Field } from '@csa-italy/havas-design-system'
+import { Field } from '@ui-kit/ui-kit'
 
 <Field />
 ```
@@ -535,14 +540,14 @@ import { Field } from '@csa-italy/havas-design-system'
 ### HoverCard
 
 **File:** `src/components/ui/hover-card.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-hover-card--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-hover-card--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-hover-card--docs](https://example.github.io/ui-kit/?path=/story/ui-hover-card--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { HoverCard } from '@csa-italy/havas-design-system'
+import { HoverCard } from '@ui-kit/ui-kit'
 
 <HoverCard />
 ```
@@ -553,14 +558,14 @@ import { HoverCard } from '@csa-italy/havas-design-system'
 ### Input
 
 **File:** `src/components/ui/input.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-input--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-input--docs](https://example.github.io/ui-kit/?path=/story/ui-input--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Input } from '@csa-italy/havas-design-system'
+import { Input } from '@ui-kit/ui-kit'
 
 <Input />
 ```
@@ -571,14 +576,14 @@ import { Input } from '@csa-italy/havas-design-system'
 ### InputGroup
 
 **File:** `src/components/ui/input-group.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-group--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-group--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-input-group--docs](https://example.github.io/ui-kit/?path=/story/ui-input-group--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { InputGroup } from '@csa-italy/havas-design-system'
+import { InputGroup } from '@ui-kit/ui-kit'
 
 <InputGroup />
 ```
@@ -589,14 +594,14 @@ import { InputGroup } from '@csa-italy/havas-design-system'
 ### InputOTP
 
 **File:** `src/components/ui/input-otp.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-otp--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-input-otp--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-input-otp--docs](https://example.github.io/ui-kit/?path=/story/ui-input-otp--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { InputOTP } from '@csa-italy/havas-design-system'
+import { InputOTP } from '@ui-kit/ui-kit'
 
 <InputOTP />
 ```
@@ -607,14 +612,14 @@ import { InputOTP } from '@csa-italy/havas-design-system'
 ### Item
 
 **File:** `src/components/ui/item.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-item--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-item--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-item--docs](https://example.github.io/ui-kit/?path=/story/ui-item--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Item } from '@csa-italy/havas-design-system'
+import { Item } from '@ui-kit/ui-kit'
 
 <Item />
 ```
@@ -625,14 +630,14 @@ import { Item } from '@csa-italy/havas-design-system'
 ### Kbd
 
 **File:** `src/components/ui/kbd.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-kbd--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-kbd--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-kbd--docs](https://example.github.io/ui-kit/?path=/story/ui-kbd--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Kbd } from '@csa-italy/havas-design-system'
+import { Kbd } from '@ui-kit/ui-kit'
 
 <Kbd />
 ```
@@ -643,14 +648,14 @@ import { Kbd } from '@csa-italy/havas-design-system'
 ### Label
 
 **File:** `src/components/ui/label.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-label--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-label--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-label--docs](https://example.github.io/ui-kit/?path=/story/ui-label--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Label } from '@csa-italy/havas-design-system'
+import { Label } from '@ui-kit/ui-kit'
 
 <Label />
 ```
@@ -661,14 +666,14 @@ import { Label } from '@csa-italy/havas-design-system'
 ### Menubar
 
 **File:** `src/components/ui/menubar.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-menubar--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-menubar--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-menubar--docs](https://example.github.io/ui-kit/?path=/story/ui-menubar--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Menubar } from '@csa-italy/havas-design-system'
+import { Menubar } from '@ui-kit/ui-kit'
 
 <Menubar />
 ```
@@ -679,14 +684,14 @@ import { Menubar } from '@csa-italy/havas-design-system'
 ### NativeSelect
 
 **File:** `src/components/ui/native-select.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-native-select--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-native-select--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-native-select--docs](https://example.github.io/ui-kit/?path=/story/ui-native-select--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { NativeSelect } from '@csa-italy/havas-design-system'
+import { NativeSelect } from '@ui-kit/ui-kit'
 
 <NativeSelect />
 ```
@@ -697,14 +702,14 @@ import { NativeSelect } from '@csa-italy/havas-design-system'
 ### NavigationMenu
 
 **File:** `src/components/ui/navigation-menu.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-navigation-menu--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-navigation-menu--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-navigation-menu--docs](https://example.github.io/ui-kit/?path=/story/ui-navigation-menu--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { NavigationMenu } from '@csa-italy/havas-design-system'
+import { NavigationMenu } from '@ui-kit/ui-kit'
 
 <NavigationMenu />
 ```
@@ -715,14 +720,14 @@ import { NavigationMenu } from '@csa-italy/havas-design-system'
 ### Pagination
 
 **File:** `src/components/ui/pagination.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-pagination--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-pagination--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-pagination--docs](https://example.github.io/ui-kit/?path=/story/ui-pagination--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Pagination } from '@csa-italy/havas-design-system'
+import { Pagination } from '@ui-kit/ui-kit'
 
 <Pagination />
 ```
@@ -733,14 +738,14 @@ import { Pagination } from '@csa-italy/havas-design-system'
 ### Popover
 
 **File:** `src/components/ui/popover.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-popover--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-popover--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-popover--docs](https://example.github.io/ui-kit/?path=/story/ui-popover--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Popover } from '@csa-italy/havas-design-system'
+import { Popover } from '@ui-kit/ui-kit'
 
 <Popover />
 ```
@@ -751,14 +756,14 @@ import { Popover } from '@csa-italy/havas-design-system'
 ### Progress
 
 **File:** `src/components/ui/progress.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-progress--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-progress--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-progress--docs](https://example.github.io/ui-kit/?path=/story/ui-progress--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Progress } from '@csa-italy/havas-design-system'
+import { Progress } from '@ui-kit/ui-kit'
 
 <Progress />
 ```
@@ -769,14 +774,14 @@ import { Progress } from '@csa-italy/havas-design-system'
 ### RadioGroup
 
 **File:** `src/components/ui/radio-group.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-radio-group--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-radio-group--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-radio-group--docs](https://example.github.io/ui-kit/?path=/story/ui-radio-group--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { RadioGroup } from '@csa-italy/havas-design-system'
+import { RadioGroup } from '@ui-kit/ui-kit'
 
 <RadioGroup />
 ```
@@ -787,14 +792,14 @@ import { RadioGroup } from '@csa-italy/havas-design-system'
 ### ResizableHandle
 
 **File:** `src/components/ui/resizable.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-resizable--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-resizable--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-resizable--docs](https://example.github.io/ui-kit/?path=/story/ui-resizable--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ResizableHandle } from '@csa-italy/havas-design-system'
+import { ResizableHandle } from '@ui-kit/ui-kit'
 
 <ResizableHandle />
 ```
@@ -805,14 +810,14 @@ import { ResizableHandle } from '@csa-italy/havas-design-system'
 ### ScrollArea
 
 **File:** `src/components/ui/scroll-area.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-scroll-area--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-scroll-area--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-scroll-area--docs](https://example.github.io/ui-kit/?path=/story/ui-scroll-area--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ScrollArea } from '@csa-italy/havas-design-system'
+import { ScrollArea } from '@ui-kit/ui-kit'
 
 <ScrollArea />
 ```
@@ -823,14 +828,15 @@ import { ScrollArea } from '@csa-italy/havas-design-system'
 ### Select
 
 **File:** `src/components/ui/select.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-select--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-select--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-select--docs](https://example.github.io/ui-kit/?path=/story/ui-select--docs)
 
-_Nessuna descrizione disponibile._
+Accessible select component based on Radix UI.
+Exporta sub-components: SelectTrigger, SelectContent, SelectItem, SelectLabel, SelectSeparator, SelectGroup, SelectValue.
 
 **Usage:**
 
 ```tsx
-import { Select } from '@csa-italy/havas-design-system'
+import { Select } from '@ui-kit/ui-kit'
 
 <Select />
 ```
@@ -841,14 +847,14 @@ import { Select } from '@csa-italy/havas-design-system'
 ### Separator
 
 **File:** `src/components/ui/separator.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-separator--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-separator--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-separator--docs](https://example.github.io/ui-kit/?path=/story/ui-separator--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Separator } from '@csa-italy/havas-design-system'
+import { Separator } from '@ui-kit/ui-kit'
 
 <Separator />
 ```
@@ -859,14 +865,15 @@ import { Separator } from '@csa-italy/havas-design-system'
 ### Sheet
 
 **File:** `src/components/ui/sheet.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-sheet--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sheet--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-sheet--docs](https://example.github.io/ui-kit/?path=/story/ui-sheet--docs)
 
-_Nessuna descrizione disponibile._
+A drawer component that slides in from the edge of the screen.
+Based on Radix UI Dialog primitive.
 
 **Usage:**
 
 ```tsx
-import { Sheet } from '@csa-italy/havas-design-system'
+import { Sheet } from '@ui-kit/ui-kit'
 
 <Sheet />
 ```
@@ -877,14 +884,14 @@ import { Sheet } from '@csa-italy/havas-design-system'
 ### Sidebar
 
 **File:** `src/components/ui/sidebar.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-sidebar--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sidebar--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-sidebar--docs](https://example.github.io/ui-kit/?path=/story/ui-sidebar--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Sidebar } from '@csa-italy/havas-design-system'
+import { Sidebar } from '@ui-kit/ui-kit'
 
 <Sidebar />
 ```
@@ -895,14 +902,14 @@ import { Sidebar } from '@csa-italy/havas-design-system'
 ### Skeleton
 
 **File:** `src/components/ui/skeleton.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-skeleton--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-skeleton--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-skeleton--docs](https://example.github.io/ui-kit/?path=/story/ui-skeleton--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Skeleton } from '@csa-italy/havas-design-system'
+import { Skeleton } from '@ui-kit/ui-kit'
 
 <Skeleton />
 ```
@@ -913,14 +920,14 @@ import { Skeleton } from '@csa-italy/havas-design-system'
 ### Slider
 
 **File:** `src/components/ui/slider.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-slider--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-slider--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-slider--docs](https://example.github.io/ui-kit/?path=/story/ui-slider--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Slider } from '@csa-italy/havas-design-system'
+import { Slider } from '@ui-kit/ui-kit'
 
 <Slider />
 ```
@@ -931,14 +938,14 @@ import { Slider } from '@csa-italy/havas-design-system'
 ### Toaster
 
 **File:** `src/components/ui/sonner.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-sonner--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-sonner--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-sonner--docs](https://example.github.io/ui-kit/?path=/story/ui-sonner--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Toaster } from '@csa-italy/havas-design-system'
+import { Toaster } from '@ui-kit/ui-kit'
 
 <Toaster />
 ```
@@ -949,14 +956,14 @@ import { Toaster } from '@csa-italy/havas-design-system'
 ### Spinner
 
 **File:** `src/components/ui/spinner.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-spinner--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-spinner--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-spinner--docs](https://example.github.io/ui-kit/?path=/story/ui-spinner--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Spinner } from '@csa-italy/havas-design-system'
+import { Spinner } from '@ui-kit/ui-kit'
 
 <Spinner />
 ```
@@ -967,14 +974,14 @@ import { Spinner } from '@csa-italy/havas-design-system'
 ### Switch
 
 **File:** `src/components/ui/switch.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-switch--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-switch--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-switch--docs](https://example.github.io/ui-kit/?path=/story/ui-switch--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Switch } from '@csa-italy/havas-design-system'
+import { Switch } from '@ui-kit/ui-kit'
 
 <Switch />
 ```
@@ -985,14 +992,14 @@ import { Switch } from '@csa-italy/havas-design-system'
 ### Table
 
 **File:** `src/components/ui/table.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-table--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-table--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-table--docs](https://example.github.io/ui-kit/?path=/story/ui-table--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Table } from '@csa-italy/havas-design-system'
+import { Table } from '@ui-kit/ui-kit'
 
 <Table />
 ```
@@ -1003,14 +1010,14 @@ import { Table } from '@csa-italy/havas-design-system'
 ### Tabs
 
 **File:** `src/components/ui/tabs.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-tabs--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-tabs--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-tabs--docs](https://example.github.io/ui-kit/?path=/story/ui-tabs--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Tabs } from '@csa-italy/havas-design-system'
+import { Tabs } from '@ui-kit/ui-kit'
 
 <Tabs />
 ```
@@ -1021,14 +1028,14 @@ import { Tabs } from '@csa-italy/havas-design-system'
 ### Textarea
 
 **File:** `src/components/ui/textarea.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-textarea--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-textarea--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-textarea--docs](https://example.github.io/ui-kit/?path=/story/ui-textarea--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Textarea } from '@csa-italy/havas-design-system'
+import { Textarea } from '@ui-kit/ui-kit'
 
 <Textarea />
 ```
@@ -1039,14 +1046,14 @@ import { Textarea } from '@csa-italy/havas-design-system'
 ### Toggle
 
 **File:** `src/components/ui/toggle.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-toggle--docs](https://example.github.io/ui-kit/?path=/story/ui-toggle--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Toggle } from '@csa-italy/havas-design-system'
+import { Toggle } from '@ui-kit/ui-kit'
 
 <Toggle />
 ```
@@ -1057,14 +1064,14 @@ import { Toggle } from '@csa-italy/havas-design-system'
 ### ToggleGroup
 
 **File:** `src/components/ui/toggle-group.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle-group--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-toggle-group--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-toggle-group--docs](https://example.github.io/ui-kit/?path=/story/ui-toggle-group--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { ToggleGroup } from '@csa-italy/havas-design-system'
+import { ToggleGroup } from '@ui-kit/ui-kit'
 
 <ToggleGroup />
 ```
@@ -1075,14 +1082,14 @@ import { ToggleGroup } from '@csa-italy/havas-design-system'
 ### Tooltip
 
 **File:** `src/components/ui/tooltip.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-tooltip--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-tooltip--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-tooltip--docs](https://example.github.io/ui-kit/?path=/story/ui-tooltip--docs)
 
 _Nessuna descrizione disponibile._
 
 **Usage:**
 
 ```tsx
-import { Tooltip } from '@csa-italy/havas-design-system'
+import { Tooltip } from '@ui-kit/ui-kit'
 
 <Tooltip />
 ```
@@ -1093,7 +1100,7 @@ import { Tooltip } from '@csa-italy/havas-design-system'
 ### GlobalHeader
 
 **File:** `src/components/layout/GlobalHeader.tsx`  
-**Live Demo:** [https://csa-italy.github.io/havas-design-system/?path=/story/ui-globalheader--docs](https://csa-italy.github.io/havas-design-system/?path=/story/ui-globalheader--docs)
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-globalheader--docs](https://example.github.io/ui-kit/?path=/story/ui-globalheader--docs)
 
 GlobalHeader component for the application top navigation.
 Standardizes the display of breadcrumbs, notifications, and user profile.
@@ -1115,7 +1122,129 @@ Standardizes the display of breadcrumbs, notifications, and user profile.
 **Usage:**
 
 ```tsx
-import { GlobalHeader } from '@csa-italy/havas-design-system'
+import { GlobalHeader } from '@ui-kit/ui-kit'
 
 <GlobalHeader />
+```
+
+
+---
+
+### AppLayout
+
+**File:** `src/components/layout/AppLayout.tsx`  
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-applayout--docs](https://example.github.io/ui-kit/?path=/story/ui-applayout--docs)
+
+_Nessuna descrizione disponibile._
+
+**Props:**
+
+| Prop | Tipo | Default | Required | Descrizione |
+|------|------|---------|----------|-------------|
+| `navItems` | `NavItem[] | undefined` | `—` | — | — |
+| `currentPath` | `string | undefined` | `—` | — | — |
+| `brandName` | `string | undefined` | `—` | — | — |
+| `breadcrumbs` | `BreadcrumbData[] | undefined` | `—` | — | — |
+| `defaultSidebarOpen` | `boolean | undefined` | `—` | — | — |
+| `children` | `ReactNode` | `—` | — | — |
+
+**Usage:**
+
+```tsx
+import { AppLayout } from '@ui-kit/ui-kit'
+
+<AppLayout>
+  Content
+</AppLayout>
+```
+
+
+---
+
+### AppSidebar
+
+**File:** `src/components/layout/AppSidebar.tsx`  
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-appsidebar--docs](https://example.github.io/ui-kit/?path=/story/ui-appsidebar--docs)
+
+_Nessuna descrizione disponibile._
+
+**Props:**
+
+| Prop | Tipo | Default | Required | Descrizione |
+|------|------|---------|----------|-------------|
+| `items` | `NavItem[] | undefined` | `—` | — | — |
+| `currentPath` | `string` | `—` | ✅ | — |
+| `brandName` | `string | undefined` | `—` | — | — |
+
+**Usage:**
+
+```tsx
+import { AppSidebar } from '@ui-kit/ui-kit'
+
+<AppSidebar currentPath="value" />
+```
+
+
+---
+
+### AppBreadcrumb
+
+**File:** `src/components/layout/AppBreadcrumb.tsx`  
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-appbreadcrumb--docs](https://example.github.io/ui-kit/?path=/story/ui-appbreadcrumb--docs)
+
+_Nessuna descrizione disponibile._
+
+**Props:**
+
+| Prop | Tipo | Default | Required | Descrizione |
+|------|------|---------|----------|-------------|
+| `breadcrumbs` | `AppBreadcrumbItem[]` | `—` | ✅ | — |
+
+**Usage:**
+
+```tsx
+import { AppBreadcrumb } from '@ui-kit/ui-kit'
+
+<AppBreadcrumb breadcrumbs="value" />
+```
+
+
+---
+
+### PageContent
+
+**File:** `src/components/layout/PageContent.tsx`  
+**Live Demo:** [https://example.github.io/ui-kit/?path=/story/ui-pagecontent--docs](https://example.github.io/ui-kit/?path=/story/ui-pagecontent--docs)
+
+PageContent - A consistent content container for page layouts.
+
+Provides consistent padding and max-width for main content areas
+within the AppLayout. Uses the working pattern: `flex flex-col gap-6 p-4 lg:p-6 w-full mx-auto`.
+
+**Installation**
+```bash
+npx shadcn@latest add page-content
+```
+
+**Usage**
+```tsx
+<PageContent>
+  <h1>Page Title</h1>
+  <Card>Content</Card>
+</PageContent>
+```
+
+**Props:**
+
+| Prop | Tipo | Default | Required | Descrizione |
+|------|------|---------|----------|-------------|
+| `maxWidth` | `"default" | "sm" | "md" | "lg" | "xl" | "2xl" | "full" | undefined` | `—` | — | Maximum width of the content container |
+| `padding` | `boolean | undefined` | `—` | — | Whether to apply consistent padding |
+
+**Usage:**
+
+```tsx
+import { PageContent } from '@ui-kit/ui-kit'
+
+<PageContent />
 ```

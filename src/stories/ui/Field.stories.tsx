@@ -43,7 +43,7 @@ export const Default: Story = {
     <Field {...args}>
       <FieldLabel>Email</FieldLabel>
       <FieldDescription>Inserisci il tuo indirizzo email</FieldDescription>
-      <Input type="email" placeholder="mario.rossi@havas.com" />
+      <Input type="email" placeholder="mario.rossi@example.com" />
     </Field>
   ),
 };
