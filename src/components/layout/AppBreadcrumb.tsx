@@ -1,19 +1,19 @@
 import {
   Breadcrumb,
-  BreadcrumbItem,
+  BreadcrumbItem as BreadcrumbItemComp,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '../ui/breadcrumb';
 
-export interface BreadcrumbItem {
+export interface AppBreadcrumbItem {
   title: string;
   href?: string;
 }
 
 interface AppBreadcrumbProps {
-  breadcrumbs: BreadcrumbItem[];
+  breadcrumbs: AppBreadcrumbItem[];
 }
 
 export function AppBreadcrumb({ breadcrumbs }: AppBreadcrumbProps) {
@@ -23,13 +23,13 @@ export function AppBreadcrumb({ breadcrumbs }: AppBreadcrumbProps) {
         {breadcrumbs.reduce<React.ReactNode[]>((acc, crumb, index) => {
           const isLast = index === breadcrumbs.length - 1;
           acc.push(
-            <BreadcrumbItem key={`item-${index}`}>
+            <BreadcrumbItemComp key={`item-${index}`}>
               {isLast || !crumb.href ? (
                 <BreadcrumbPage>{crumb.title}</BreadcrumbPage>
               ) : (
                 <BreadcrumbLink href={crumb.href}>{crumb.title}</BreadcrumbLink>
               )}
-            </BreadcrumbItem>
+            </BreadcrumbItemComp>
           );
           if (!isLast) {
             acc.push(<BreadcrumbSeparator key={`sep-${index}`} />);

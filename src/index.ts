@@ -1,7 +1,6 @@
 import './styles/theme.css';
 
 export * from './components/ui/accordion';
-export * from './components/ui/accordion';
 export * from './components/ui/alert';
 export * from './components/ui/alert-dialog';
 export * from './components/ui/aspect-ratio';
@@ -59,6 +58,10 @@ export * from './components/ui/tooltip';
 
 // Layout Components
 export * from './components/layout/GlobalHeader';
+export * from './components/layout/AppLayout';
+export * from './components/layout/AppSidebar';
+export * from './components/layout/AppBreadcrumb';
+export * from './components/layout/PageContent';
 
 // Utilities
 export * from './lib/utils';

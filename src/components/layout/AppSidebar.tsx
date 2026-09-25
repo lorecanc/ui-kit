@@ -15,7 +15,7 @@ import {
   SidebarInput,
   useSidebar,
 } from '../ui/sidebar';
-import { PanelLeftIcon } from 'lucide-react';
+
 
 export interface NavItem {
   title: string;
@@ -55,14 +55,14 @@ function ClickableLogo({ children }: { children: React.ReactNode }) {
   return (
     <button
       onClick={() => toggleSidebar()}
-      className="relative flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary/10 text-sidebar-primary font-bold text-sm shrink-0 group-data-[collapsible=icon]:cursor-pointer"
+      className="relative flex aspect-square size-8 items-center justify-center text-sidebar-primary font-bold text-sm shrink-0 group-data-[collapsible=icon]:cursor-pointer"
     >
       {children}
     </button>
   );
 }
 
-export function AppSidebar({ items = [], currentPath, brandName = "Design System" }: AppSidebarProps) {
+export function AppSidebar({ items = [], currentPath, brandName = "Greppi" }: AppSidebarProps) {
   return (
     <Sidebar collapsible="icon" variant="floating">
       <SidebarHeader className="relative">
@@ -71,11 +71,15 @@ export function AppSidebar({ items = [], currentPath, brandName = "Design System
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 flex-1 min-w-0">
                 <ClickableLogo>
-                  <span className="absolute opacity-100 group-data-[collapsible=icon]:group-hover:opacity-0 transition-opacity duration-200 ease-in-out">H</span>
-                  <PanelLeftIcon className="absolute size-4 opacity-0 group-data-[collapsible=icon]:group-hover:opacity-100 transition-opacity duration-200 ease-in-out text-sidebar-primary" />
+                  <img
+                    src="/Icon_Greppi.png"
+                    alt="Greppi"
+                    className="h-6 w-6 object-contain"
+                  />
                 </ClickableLogo>
                 <div className="grid text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                  <span className="truncate font-sans font-medium">{brandName}</span>
+                  <span className="truncate font-sans font-bold">{brandName}</span>
+                  <span className="truncate text-xs text-muted-foreground font-light tracking-wider uppercase">Labour Consulting</span>
                 </div>
               </div>
               <div className="group-data-[collapsible=icon]:hidden shrink-0">
@@ -117,7 +121,7 @@ export function AppSidebar({ items = [], currentPath, brandName = "Design System
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" className="group-data-[collapsible=icon]:!p-0">
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-muted text-foreground text-xs font-medium shrink-0 group-data-[collapsible=icon]:mx-auto">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground text-xs font-black shrink-0 group-data-[collapsible=icon]:mx-auto">
                 LC
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
