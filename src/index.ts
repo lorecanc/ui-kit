@@ -58,7 +58,12 @@ export * from './components/ui/toggle-group';
 export * from './components/ui/tooltip';
 
 // Layout Components
+export * from './components/layout/AppLayout';
+export * from './components/layout/AppSidebar';
 export * from './components/layout/GlobalHeader';
+export * from './components/layout/PageContent';
+export * from './components/layout/SpaHeader';
+export * from './components/layout/SpaLayout';
 
 // Utilities
 export * from './lib/utils';

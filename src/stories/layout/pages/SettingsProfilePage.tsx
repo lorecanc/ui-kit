@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from '../../../components/ui/card';
+import { PageSection } from '../../../components/layout/PageContent';
 import { Avatar, AvatarFallback, AvatarImage } from '../../../components/ui/avatar';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';
@@ -11,13 +12,29 @@ import { Switch } from '../../../components/ui/switch';
 import { Sun, Moon, Monitor, MapPin, Globe, Shield, Lock, Camera } from 'lucide-react';
 export function SettingsProfilePage() {
   return (
-    <div className="space-y-6">
+    <>
       {/* Page Header */}
-      <div>
+      <PageSection span={1}>
         <h1 className="text-3xl font-bold tracking-tight text-foreground">Settings & Profile</h1>
         <p className="text-sm text-muted-foreground mt-1">Manage your account settings and preferences.</p>
-      </div>
+      </PageSection>
 
+      <PageSection span={1}>
+        <Card>
+          <CardContent className="flex items-center gap-6">
+            <Avatar className="h-20 w-20 border-2 border-border">
+              <AvatarImage src="" />
+              <AvatarFallback className="text-lg bg-primary/10 text-primary">LC</AvatarFallback>
+            </Avatar>
+            <div className="space-y-2">
+              <Button variant="outline" size="sm"><Camera className="mr-2 h-4 w-4" /> Change Avatar</Button>
+              <p className="text-xs text-muted-foreground">JPG, PNG or GIF. Max 2MB.</p>
+            </div>
+          </CardContent>
+        </Card>
+      </PageSection>
+
+      <PageSection span="full">
       <Tabs defaultValue="profile" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="profile">Profile</TabsTrigger>
@@ -33,17 +50,6 @@ export function SettingsProfilePage() {
               <CardDescription>Update your personal details and public profile.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex items-center gap-6">
-                <Avatar className="h-20 w-20 border-2 border-border">
-                  <AvatarImage src="" />
-                  <AvatarFallback className="text-lg bg-primary/10 text-primary">LC</AvatarFallback>
-                </Avatar>
-                <div className="space-y-2">
-                  <Button variant="outline" size="sm"><Camera className="mr-2 h-4 w-4" /> Change Avatar</Button>
-                  <p className="text-xs text-muted-foreground">JPG, PNG or GIF. Max 2MB.</p>
-                </div>
-              </div>
-              <Separator />
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">First Name</Label>
@@ -198,6 +204,7 @@ export function SettingsProfilePage() {
           </Card>
         </TabsContent>
       </Tabs>
-    </div>
+      </PageSection>
+    </>
   );
 }

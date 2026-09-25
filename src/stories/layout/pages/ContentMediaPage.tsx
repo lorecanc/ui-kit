@@ -14,16 +14,18 @@ import {
 import { Empty, EmptyHeader, EmptyTitle, EmptyDescription, EmptyContent, EmptyMedia } from '../../../components/ui/empty';
 import { Upload, Image as ImageIcon, FileText, Eye, Download } from 'lucide-react';
 import { cn } from '../../../lib/utils';
+import { PageSection } from '../../../components/layout/PageContent';
 export function ContentMediaPage() {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <>
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Content & Media</h1>
           <p className="text-sm text-muted-foreground mt-1">Manage all your digital assets and media collections.</p>
         </div>
-      </div>
-      <Card className="mb-6">
+      </PageSection>
+      <PageSection span={1}>
+      <Card>
         <CardHeader>
           <CardTitle>Featured Content</CardTitle>
           <CardDescription>Highlight your best content in the carousel.</CardDescription>
@@ -38,7 +40,7 @@ export function ContentMediaPage() {
                 { title: "Social Media Kit", category: "Social", color: "bg-orange-500" },
                 { title: "Brand Guidelines v3", category: "Brand", color: "bg-red-500" },
               ].map((item, i) => (
-                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={i} className="md:basis-full lg:basis-full">
                   <div className="p-1">
                     <Card className="overflow-hidden">
                       <AspectRatio ratio={16 / 9} className={cn(item.color, "flex items-center justify-center")}>
@@ -64,14 +66,16 @@ export function ContentMediaPage() {
           </Carousel>
         </CardContent>
       </Card>
+      </PageSection>
 
+      <PageSection span={1}>
       <Card>
         <CardHeader>
           <CardTitle>Media Library</CardTitle>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="all" className="w-full">
-            <TabsList>
+            <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="images">Images</TabsTrigger>
               <TabsTrigger value="documents">Documents</TabsTrigger>
@@ -79,7 +83,7 @@ export function ContentMediaPage() {
             </TabsList>
 
             <TabsContent value="all" className="mt-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { name: "Hero Banner.png", type: "Image", size: "1.2 MB", color: "bg-sky-400" },
                   { name: "Logo Pack.zip", type: "Document", size: "4.8 MB", color: "bg-amber-400" },
@@ -154,6 +158,7 @@ export function ContentMediaPage() {
           </Tabs>
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

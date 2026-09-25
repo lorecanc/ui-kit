@@ -39,15 +39,17 @@ import {
   ComboboxItem,
 } from '../../../components/ui/combobox';
 import { Search, Download, Filter, MoreHorizontalIcon, Eye, Pencil, Trash2 } from 'lucide-react';
+import { PageSection } from '../../../components/layout/PageContent';
 export function DataManagementPage() {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <>
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Data Management</h1>
           <p className="text-sm text-muted-foreground mt-1">View, filter, and modify your records.</p>
         </div>
-      </div>
+      </PageSection>
+      <PageSection span="full" className="min-w-0">
       <Card>
         <CardHeader className="pb-3">
           <div className="flex flex-col sm:flex-row gap-3">
@@ -79,8 +81,9 @@ export function DataManagementPage() {
             </Combobox>
           </div>
         </CardHeader>
-        <CardContent className="p-0">
-          <Table>
+        <CardContent className="min-w-0 p-0">
+          <div role="region" aria-label="Data records table" tabIndex={0} className="min-w-0 overflow-x-auto [&_[data-slot=table-container]]:overflow-visible">
+          <Table className="min-w-[720px]">
             <TableHeader>
               <TableRow>
                 <TableHead className="pl-6">ID</TableHead>
@@ -131,6 +134,7 @@ export function DataManagementPage() {
               ))}
             </TableBody>
           </Table>
+          </div>
         </CardContent>
         <CardFooter className="flex items-center justify-between border-t px-6 py-4">
           <p className="text-sm text-muted-foreground">Showing 1-6 of 48 records</p>
@@ -146,8 +150,10 @@ export function DataManagementPage() {
           </Pagination>
         </CardFooter>
       </Card>
+      </PageSection>
 
-      <Card className="mt-6">
+      <PageSection span={1}>
+      <Card>
         <CardHeader>
           <CardTitle>Loading State</CardTitle>
           <CardDescription>Skeleton placeholders while data is being fetched.</CardDescription>
@@ -158,6 +164,17 @@ export function DataManagementPage() {
             <Skeleton className="h-10 w-[180px]" />
             <Skeleton className="h-10 w-[180px]" />
           </div>
+        </CardContent>
+      </Card>
+      </PageSection>
+
+      <PageSection span={1}>
+      <Card>
+        <CardHeader>
+          <CardTitle>Loading Records</CardTitle>
+          <CardDescription>Skeleton placeholders for records being fetched.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
           {[1, 2, 3].map((i) => (
             <div key={i} className="flex gap-4 items-center">
               <Skeleton className="h-4 w-20" />
@@ -170,6 +187,7 @@ export function DataManagementPage() {
           ))}
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

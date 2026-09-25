@@ -10,6 +10,8 @@ export interface AppLayoutProps {
   brandName?: string;
   breadcrumbs?: BreadcrumbData[];
   defaultSidebarOpen?: boolean;
+  rows?: 1 | 2 | 3 | 4;
+  cols?: 1 | 2 | 3 | 4;
   children?: React.ReactNode;
 }
 
@@ -19,6 +21,8 @@ export function AppLayout({
   brandName = "Design System",
   breadcrumbs = [],
   defaultSidebarOpen = true,
+  rows,
+  cols,
   children,
 }: AppLayoutProps) {
   return (
@@ -27,7 +31,7 @@ export function AppLayout({
       <SidebarInset>
         <GlobalHeader breadcrumbs={breadcrumbs} />
 
-        <PageContent>
+        <PageContent rows={rows} cols={cols}>
           {children}
         </PageContent>
       </SidebarInset>

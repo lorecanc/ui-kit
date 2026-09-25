@@ -30,7 +30,7 @@ type Story = StoryObj<typeof meta>;
  */
 export const DefaultOverview: Story = {
   render: () => (
-    <StoryShell currentPath="/" breadcrumbTitle="Overview Default">
+    <StoryShell currentPath="/" breadcrumbTitle="Overview Default" rows={3} cols={3}>
       <OverviewPage />
     </StoryShell>
   ),
@@ -41,7 +41,7 @@ export const DefaultOverview: Story = {
  */
 export const DashboardGrid: Story = {
   render: () => (
-    <StoryShell currentPath="/" breadcrumbTitle="Dashboard View">
+    <StoryShell currentPath="/" breadcrumbTitle="Dashboard View" rows={3} cols={3}>
       <DashboardGridPage />
     </StoryShell>
   ),
@@ -52,7 +52,7 @@ export const DashboardGrid: Story = {
  */
 export const AnalysisFlow: Story = {
   render: () => (
-    <StoryShell currentPath="/analytics" breadcrumbTitle="Analysis View">
+    <StoryShell currentPath="/analytics" breadcrumbTitle="Analysis View" rows={3} cols={3}>
       <AnalysisFlowPage />
     </StoryShell>
   ),
@@ -64,7 +64,7 @@ export const AnalysisFlow: Story = {
  */
 export const FormManagement: Story = {
   render: () => (
-    <StoryShell currentPath="/forms" breadcrumbTitle="Form Management">
+    <StoryShell currentPath="/forms" breadcrumbTitle="Form Management" rows={3} cols={2}>
       <FormManagementPage />
     </StoryShell>
   ),
@@ -76,7 +76,7 @@ export const FormManagement: Story = {
  */
 export const SettingsProfile: Story = {
   render: () => (
-    <StoryShell currentPath="/settings" breadcrumbTitle="Settings">
+    <StoryShell currentPath="/settings" breadcrumbTitle="Settings" rows={2} cols={2}>
       <SettingsProfilePage />
     </StoryShell>
   ),
@@ -88,7 +88,7 @@ export const SettingsProfile: Story = {
  */
 export const DataManagement: Story = {
   render: () => (
-    <StoryShell currentPath="/data" breadcrumbTitle="Data Management">
+    <StoryShell currentPath="/data" breadcrumbTitle="Data Management" rows={3} cols={2}>
       <DataManagementPage />
     </StoryShell>
   ),
@@ -100,7 +100,7 @@ export const DataManagement: Story = {
  */
 export const ContentMedia: Story = {
   render: () => (
-    <StoryShell currentPath="/content" breadcrumbTitle="Content & Media">
+    <StoryShell currentPath="/content" breadcrumbTitle="Content & Media" rows={2} cols={2}>
       <ContentMediaPage />
     </StoryShell>
   ),
@@ -112,7 +112,7 @@ export const ContentMedia: Story = {
  */
 export const CalendarScheduling: Story = {
   render: () => (
-    <StoryShell currentPath="/calendar" breadcrumbTitle="Calendar">
+    <StoryShell currentPath="/calendar" breadcrumbTitle="Calendar" rows={3} cols={3}>
       <CalendarSchedulingPage />
     </StoryShell>
   ),
@@ -124,7 +124,7 @@ export const CalendarScheduling: Story = {
  */
 export const Communication: Story = {
   render: () => (
-    <StoryShell currentPath="/messages" breadcrumbTitle="Messages">
+    <StoryShell currentPath="/messages" breadcrumbTitle="Messages" rows={4} cols={3}>
       <CommunicationPage />
     </StoryShell>
   ),
@@ -136,7 +136,7 @@ export const Communication: Story = {
  */
 export const Feedback: Story = {
   render: () => (
-    <StoryShell currentPath="/feedback" breadcrumbTitle="Feedback & States">
+    <StoryShell currentPath="/feedback" breadcrumbTitle="Feedback & States" rows={4} cols={2}>
       <FeedbackPage />
     </StoryShell>
   ),

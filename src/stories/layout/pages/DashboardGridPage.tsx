@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from '../../../components/ui/card';
+import { PageSection } from '../../../components/layout/PageContent';
 import { Badge } from '../../../components/ui/badge';
 import {
   Table,
@@ -49,15 +50,15 @@ const tableData = [
 
 export function DashboardGridPage() {
   return (
-    <div className="space-y-6">
+    <>
       {/* Page Header */}
-      <div>
+      <PageSection span="full">
         <h1 className="text-3xl font-bold tracking-tight text-foreground">Dashboard Grid</h1>
         <p className="text-sm text-muted-foreground mt-1">High-density view of multiple metrics and capabilities in a single pane of glass.</p>
-      </div>
+      </PageSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <Card className="lg:col-span-2">
+      <PageSection span={2}>
+        <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-lg">Primary Trend Chart</CardTitle>
             <Select defaultValue="filter">
@@ -80,7 +81,9 @@ export function DashboardGridPage() {
             </ChartContainer>
           </CardContent>
         </Card>
+      </PageSection>
 
+      <PageSection span={1}>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-lg">Capabilities</CardTitle>
@@ -98,8 +101,9 @@ export function DashboardGridPage() {
             </ChartContainer>
           </CardContent>
         </Card>
-      </div>
+      </PageSection>
 
+      <PageSection span="full">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-lg">Detailed List View</CardTitle>
@@ -134,6 +138,7 @@ export function DashboardGridPage() {
           </Table>
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

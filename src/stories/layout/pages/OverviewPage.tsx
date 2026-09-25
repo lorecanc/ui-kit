@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '../../../components/ui/card';
+import { PageSection } from '../../../components/layout/PageContent';
 import { chartData, chartConfig, pieChartData, pieChartConfig } from '../chartData';
 import { Button } from '../../../components/ui/button';
 import { Download, Users, Activity, Clock, FileBarChart, TrendingUp, TrendingDown } from 'lucide-react';
@@ -21,9 +22,9 @@ import {
 
 export function OverviewPage() {
   return (
-    <div className="space-y-6">
+    <>
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Overview</h1>
           <p className="text-sm text-muted-foreground mt-1">A comprehensive daily summary of your platform's performance and audience insights.</p>
@@ -32,10 +33,10 @@ export function OverviewPage() {
           <Button variant="outline" size="sm">Configure</Button>
           <Button size="sm"><Download className="mr-2 h-4 w-4" /> Export Report</Button>
         </div>
-      </div>
+      </PageSection>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <PageSection span="full" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
           { title: "Total Users", value: "24,591", trend: "+14.5%", up: true, icon: Users },
           { title: "Active Sessions", value: "1,234", trend: "+5.1%", up: true, icon: Activity },
@@ -59,9 +60,9 @@ export function OverviewPage() {
             </Card>
           );
         })}
-      </div>
+      </PageSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <PageSection span={1}>
         <Card>
           <CardHeader>
             <CardTitle>Audience Trend</CardTitle>
@@ -78,7 +79,9 @@ export function OverviewPage() {
             </ChartContainer>
           </CardContent>
         </Card>
+      </PageSection>
 
+      <PageSection span={1}>
         <Card>
           <CardHeader>
             <CardTitle>Browser Usage</CardTitle>
@@ -93,7 +96,9 @@ export function OverviewPage() {
             </ChartContainer>
           </CardContent>
         </Card>
+      </PageSection>
 
+      <PageSection span={1}>
         <Card>
           <CardHeader>
             <CardTitle>Device Distribution</CardTitle>
@@ -110,7 +115,7 @@ export function OverviewPage() {
             </ChartContainer>
           </CardContent>
         </Card>
-      </div>
-    </div>
+      </PageSection>
+    </>
   );
 }

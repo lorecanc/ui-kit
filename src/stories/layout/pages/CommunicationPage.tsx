@@ -7,16 +7,17 @@ import { ScrollArea, ScrollBar } from '../../../components/ui/scroll-area';
 import { Alert, AlertTitle, AlertDescription } from '../../../components/ui/alert';
 import { CheckCircle2, AlertTriangle, Search, Paperclip, Smile, Send } from 'lucide-react';
 import { cn } from '../../../lib/utils';
+import { PageSection } from '../../../components/layout/PageContent';
 export function CommunicationPage() {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
+    <>
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Messages & Communication</h1>
           <p className="text-sm text-muted-foreground mt-1">Stay connected with your team and review alerts.</p>
         </div>
-      </div>
-      <div className="grid gap-3 mb-6">
+      </PageSection>
+      <PageSection span="full" className="grid gap-3">
         <Alert>
           <CheckCircle2 className="h-4 w-4" />
           <AlertTitle>All systems operational</AlertTitle>
@@ -27,10 +28,10 @@ export function CommunicationPage() {
           <AlertTitle>Connection issue detected</AlertTitle>
           <AlertDescription>Some messages may not have been delivered. Please check your connection.</AlertDescription>
         </Alert>
-      </div>
+      </PageSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-        <Card className="lg:col-span-1">
+      <PageSection span={1}>
+        <Card>
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle>Conversations</CardTitle>
@@ -71,7 +72,10 @@ export function CommunicationPage() {
           </CardContent>
         </Card>
 
-        <Card className="lg:col-span-2">
+      </PageSection>
+
+      <PageSection span={2}>
+        <Card>
           <CardHeader className="border-b pb-3">
             <div className="flex items-center gap-3">
               <Avatar className="h-9 w-9">
@@ -123,8 +127,9 @@ export function CommunicationPage() {
             </div>
           </div>
         </Card>
-      </div>
+      </PageSection>
 
+      <PageSection span="full">
       <Card>
         <CardHeader>
           <CardTitle>Toast Notifications</CardTitle>
@@ -139,6 +144,7 @@ export function CommunicationPage() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

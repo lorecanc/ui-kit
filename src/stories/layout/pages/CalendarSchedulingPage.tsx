@@ -21,17 +21,19 @@ import {
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '../../../components/ui/select';
 import { Plus, CalendarIcon } from 'lucide-react';
 import { cn } from '../../../lib/utils';
+import { PageSection } from '../../../components/layout/PageContent';
 export function CalendarSchedulingPage() {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <>
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Calendar & Scheduling</h1>
           <p className="text-sm text-muted-foreground mt-1">Organize your events, meetings, and deadlines.</p>
         </div>
-      </div>
+      </PageSection>
+      <PageSection span="full">
       <Dialog>
         <DialogTrigger asChild>
           <Button><Plus className="mr-2 h-4 w-4" /> New Event</Button>
@@ -89,9 +91,10 @@ export function CalendarSchedulingPage() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      </PageSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <Card className="lg:col-span-2">
+      <PageSection span={2}>
+        <Card>
           <CardContent className="p-6">
             <CalendarComponent
               mode="single"
@@ -107,7 +110,9 @@ export function CalendarSchedulingPage() {
             />
           </CardContent>
         </Card>
+      </PageSection>
 
+      <PageSection>
         <Card>
           <CardHeader>
             <CardTitle>Upcoming Events</CardTitle>
@@ -138,7 +143,7 @@ export function CalendarSchedulingPage() {
             </ScrollArea>
           </CardContent>
         </Card>
-      </div>
-    </div>
+      </PageSection>
+    </>
   );
 }

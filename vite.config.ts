@@ -14,7 +14,7 @@ export default defineConfig({
     tsconfigPath: './tsconfig.app.json',
     insertTypesEntry: true,
     include: ['src/index.ts', 'src/**/*.ts', 'src/**/*.tsx'],
-    exclude: ['src/stories', '**/*.stories.ts', '**/*.stories.tsx']
+    exclude: ['src/stories', '**/*.stories.ts', '**/*.stories.tsx', '**/*.test.ts', '**/*.test.tsx']
   })],
   resolve: {
     alias: {

@@ -1,0 +1,46 @@
+import { useState } from 'react';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { Download, Eye, Filter, Globe, Newspaper, PlusCircle, Radio, Target, TrendingUp, Tv, Users } from 'lucide-react';
+import { PageSection } from '../../../components/layout/PageContent';
+import { Avatar, AvatarFallback } from '../../../components/ui/avatar';
+import { Badge } from '../../../components/ui/badge';
+import { Button } from '../../../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
+import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from '../../../components/ui/chart';
+import { Progress } from '../../../components/ui/progress';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../components/ui/tabs';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../../components/ui/table';
+
+const channelData = [
+  { month: 'Jan', tv: 420, digital: 280, print: 90, radio: 60 }, { month: 'Feb', tv: 380, digital: 340, print: 80, radio: 55 },
+  { month: 'Mar', tv: 450, digital: 390, print: 100, radio: 70 }, { month: 'Apr', tv: 410, digital: 450, print: 85, radio: 65 },
+  { month: 'May', tv: 490, digital: 520, print: 110, radio: 80 }, { month: 'Jun', tv: 530, digital: 600, print: 95, radio: 75 },
+];
+const chartConfig = { tv: { label: 'TV', color: 'var(--chart-1)' }, digital: { label: 'Digital', color: 'var(--chart-2)' }, print: { label: 'Print', color: 'var(--chart-3)' }, radio: { label: 'Radio', color: 'var(--chart-4)' } } satisfies ChartConfig;
+const campaigns = [
+  { name: 'Summer Launch', brand: 'Northstar', market: 'Italy', budget: 480000, spent: 312000, status: 'Active', channels: ['TV', 'Digital'], team: ['AL', 'MR'], reach: '4.2M' },
+  { name: 'Brand Awareness Q2', brand: 'Fieldworks', market: 'France', budget: 220000, spent: 220000, status: 'Completed', channels: ['Digital', 'Print'], team: ['PD', 'GF'], reach: '1.8M' },
+  { name: 'Product RTB Drive', brand: 'Orbit Labs', market: 'Spain', budget: 150000, spent: 45000, status: 'Active', channels: ['Digital', 'Radio'], team: ['SR'], reach: '980K' },
+  { name: 'Autumn Reposition', brand: 'Northstar', market: 'Germany', budget: 360000, spent: 0, status: 'Draft', channels: ['TV', 'Print', 'Radio'], team: ['HL', 'BW'], reach: '—' },
+];
+
+export function MediaPlanningPage() {
+  const [activeMarket, setActiveMarket] = useState('all');
+  const visibleCampaigns = activeMarket === 'all' ? campaigns : campaigns.filter(campaign => campaign.market.toLowerCase() === activeMarket);
+  const metrics = [
+    { icon: Tv, label: 'Total Budget', value: '$3.05M', delta: '+8.2%' }, { icon: Globe, label: 'Spent', value: '$589K', delta: '19.3%' },
+    { icon: Eye, label: 'Estimated Reach', value: '7.4M', delta: '+12.1%' }, { icon: Users, label: 'Active Campaigns', value: '2', delta: '4 total' },
+  ];
+  return <>
+    <PageSection span="full" className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div><h1 className="flex items-center gap-2 text-3xl font-bold tracking-tight"><Target className="h-7 w-7 text-primary" />Media Planning</h1><p className="mt-1 text-sm text-muted-foreground">H1 media plan — total budget <span className="font-semibold text-foreground">$3,050,000</span></p></div><div className="flex flex-wrap items-center gap-2"><Select value={activeMarket} onValueChange={setActiveMarket}><SelectTrigger className="w-[150px]"><SelectValue placeholder="Market" /></SelectTrigger><SelectContent><SelectItem value="all">All markets</SelectItem><SelectItem value="italy">Italy</SelectItem><SelectItem value="france">France</SelectItem><SelectItem value="spain">Spain</SelectItem><SelectItem value="germany">Germany</SelectItem></SelectContent></Select><Button variant="outline" size="sm"><Filter className="mr-2 h-4 w-4" />Filters</Button><Button variant="outline" size="sm"><Download className="mr-2 h-4 w-4" />Export</Button><Button size="sm"><PlusCircle className="mr-2 h-4 w-4" />New Campaign</Button></div></PageSection>
+    {[metrics.slice(0, 2), metrics.slice(2)].map((group, index) => <PageSection key={index} span={1} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {group.map(({ icon: Icon, label, value, delta }) => <Card key={label}><CardContent className="pt-5"><div className="flex justify-between"><Icon className="h-5 w-5 text-muted-foreground" /><span className="flex items-center text-xs text-emerald-600"><TrendingUp className="mr-1 h-3 w-3" />{delta}</span></div><p className="mt-3 text-2xl font-bold">{value}</p><p className="text-xs text-muted-foreground">{label}</p></CardContent></Card>)}
+    </PageSection>)}
+    <PageSection span="full"><Tabs defaultValue="overview"><TabsList><TabsTrigger value="overview">Overview</TabsTrigger><TabsTrigger value="channels">Channels</TabsTrigger><TabsTrigger value="campaigns">Campaigns</TabsTrigger></TabsList>
+      <TabsContent value="overview" className="mt-4"><div className="grid gap-4 lg:grid-cols-3"><Card className="lg:col-span-2"><CardHeader><CardTitle>Investment Trend</CardTitle><CardDescription>Monthly spend by media channel — H1</CardDescription></CardHeader><CardContent><ChartContainer config={chartConfig} className="min-h-[280px] w-full"><AreaChart data={channelData}><CartesianGrid vertical={false} strokeDasharray="3 3" /><XAxis dataKey="month" /><YAxis /><ChartTooltip content={<ChartTooltipContent />} /><ChartLegend content={<ChartLegendContent />} />{(['tv', 'digital', 'print', 'radio'] as const).map(key => <Area key={key} dataKey={key} fill={`var(--color-${key})`} fillOpacity={0.12} stroke={`var(--color-${key})`} />)}</AreaChart></ChartContainer></CardContent></Card><Card><CardHeader><CardTitle>Channel Allocation</CardTitle><CardDescription>Share of total plan budget</CardDescription></CardHeader><CardContent className="space-y-5">{[{ label: 'Television', pct: 42, budget: '$1.28M', icon: Tv }, { label: 'Digital', pct: 32, budget: '$980K', icon: Globe }, { label: 'Print', pct: 15, budget: '$460K', icon: Newspaper }, { label: 'Radio & Audio', pct: 11, budget: '$330K', icon: Radio }].map(({ label, pct, budget, icon: Icon }) => <div key={label}><div className="mb-2 flex justify-between text-sm"><span className="flex items-center gap-2"><Icon className="h-4 w-4 text-primary" />{label}</span><span className="font-semibold">{pct}%</span></div><Progress value={pct} /><p className="mt-1 text-xs text-muted-foreground">{budget} allocated</p></div>)}</CardContent></Card></div></TabsContent>
+      <TabsContent value="channels" className="mt-4"><Card><CardHeader><CardTitle>Channel Performance</CardTitle><CardDescription>Monthly spend comparison by channel</CardDescription></CardHeader><CardContent><ChartContainer config={chartConfig} className="min-h-[320px] w-full"><BarChart data={channelData}><CartesianGrid vertical={false} strokeDasharray="3 3" /><XAxis dataKey="month" /><YAxis /><ChartTooltip content={<ChartTooltipContent />} /><ChartLegend content={<ChartLegendContent />} /><Bar dataKey="tv" fill="var(--color-tv)" /><Bar dataKey="digital" fill="var(--color-digital)" /><Bar dataKey="print" fill="var(--color-print)" /><Bar dataKey="radio" fill="var(--color-radio)" /></BarChart></ChartContainer></CardContent></Card></TabsContent>
+      <TabsContent value="campaigns" className="mt-4"><Card><CardHeader><CardTitle>Campaigns in Plan</CardTitle><CardDescription>{visibleCampaigns.length} campaigns for the selected market</CardDescription></CardHeader><CardContent className="p-0"><Table><TableHeader><TableRow><TableHead className="pl-6">Campaign</TableHead><TableHead>Market</TableHead><TableHead>Channels</TableHead><TableHead>Budget Used</TableHead><TableHead>Team</TableHead><TableHead>Reach</TableHead><TableHead>Status</TableHead></TableRow></TableHeader><TableBody>{visibleCampaigns.map(campaign => { const pct = Math.round(campaign.spent / campaign.budget * 100); return <TableRow key={campaign.name}><TableCell className="pl-6"><p className="font-medium">{campaign.name}</p><p className="text-xs text-muted-foreground">{campaign.brand}</p></TableCell><TableCell>{campaign.market}</TableCell><TableCell><div className="flex flex-wrap gap-1">{campaign.channels.map(channel => <Badge key={channel} variant="outline">{channel}</Badge>)}</div></TableCell><TableCell><div className="min-w-[120px]"><div className="mb-1 flex justify-between text-xs"><span>${(campaign.spent / 1000).toFixed(0)}K</span><span>{pct}%</span></div><Progress value={pct} /></div></TableCell><TableCell><div className="flex -space-x-2">{campaign.team.map(person => <Avatar key={person} className="h-7 w-7 border-2 border-background"><AvatarFallback>{person}</AvatarFallback></Avatar>)}</div></TableCell><TableCell>{campaign.reach}</TableCell><TableCell><Badge variant={campaign.status === 'Active' ? 'default' : campaign.status === 'Completed' ? 'secondary' : 'outline'}>{campaign.status}</Badge></TableCell></TableRow>; })}</TableBody></Table></CardContent></Card></TabsContent>
+    </Tabs></PageSection>
+  </>;
+}

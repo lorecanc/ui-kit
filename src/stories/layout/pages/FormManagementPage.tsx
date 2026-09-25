@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '../../../components/ui/card';
+import { PageSection } from '../../../components/layout/PageContent';
 import { Badge } from '../../../components/ui/badge';
 import { Button } from '../../../components/ui/button';
 import { Input } from '../../../components/ui/input';
@@ -43,12 +44,13 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '.
 import { Plus, Eye, Pencil, Trash2, Info } from 'lucide-react';
 export function FormManagementPage() {
   return (
-    <div className="space-y-6">
+    <>
       {/* Page Header */}
-      <div>
+      <PageSection span={1}>
         <h1 className="text-3xl font-bold tracking-tight text-foreground">Form Management</h1>
         <p className="text-sm text-muted-foreground mt-1">Manage, validate, and process your data records effectively.</p>
-      </div>
+      </PageSection>
+      <PageSection span={1} className="flex items-end lg:justify-end">
       <Dialog>
         <DialogTrigger asChild>
           <Button><Plus className="mr-2 h-4 w-4" /> Add New Record</Button>
@@ -129,20 +131,25 @@ export function FormManagementPage() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      </PageSection>
 
+      <PageSection span="full">
       <Alert className="mb-6">
         <Info className="h-4 w-4" />
         <AlertTitle>Form Validation</AlertTitle>
         <AlertDescription>All fields marked with * are required. Please ensure data accuracy before submission.</AlertDescription>
       </Alert>
+      </PageSection>
 
+      <PageSection span="full" className="min-w-0">
       <Card>
         <CardHeader>
           <CardTitle>Existing Records</CardTitle>
           <CardDescription>Manage and edit your records below.</CardDescription>
         </CardHeader>
-        <CardContent>
-          <Table>
+        <CardContent className="min-w-0">
+          <div role="region" aria-label="Existing records table" tabIndex={0} className="min-w-0 overflow-x-auto [&_[data-slot=table-container]]:overflow-visible">
+          <Table className="min-w-[640px]">
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>
@@ -207,8 +214,10 @@ export function FormManagementPage() {
               ))}
             </TableBody>
           </Table>
+          </div>
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

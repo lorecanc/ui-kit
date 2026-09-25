@@ -19,16 +19,17 @@ import {
   AlertDialogTrigger,
 } from '../../../components/ui/alert-dialog';
 import { Database, Search, Lock, XCircle, Plus, Trash2, LogOut } from 'lucide-react';
+import { PageSection } from '../../../components/layout/PageContent';
 export function FeedbackPage() {
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
+    <>
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Feedback & States</h1>
           <p className="text-sm text-muted-foreground mt-1">Examples of loading, empty, and error feedback states.</p>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      </PageSection>
+      <PageSection span="full" className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
             <CardTitle>No Data</CardTitle>
@@ -97,9 +98,10 @@ export function FeedbackPage() {
             </Empty>
           </CardContent>
         </Card>
-      </div>
+      </PageSection>
 
-      <Card className="mb-6">
+      <PageSection span={1}>
+      <Card>
         <CardHeader>
           <CardTitle>Loading States</CardTitle>
           <CardDescription>Spinner and skeleton loading patterns.</CardDescription>
@@ -158,8 +160,10 @@ export function FeedbackPage() {
           </div>
         </CardContent>
       </Card>
+      </PageSection>
 
-      <Card className="mb-6">
+      <PageSection span={1}>
+      <Card>
         <CardHeader>
           <CardTitle>Confirmation Dialogs</CardTitle>
           <CardDescription>Alert dialogs for critical actions.</CardDescription>
@@ -198,7 +202,9 @@ export function FeedbackPage() {
           </AlertDialog>
         </CardContent>
       </Card>
+      </PageSection>
 
+      <PageSection span={1}>
       <Card>
         <CardHeader>
           <CardTitle>Keyboard Shortcuts</CardTitle>
@@ -228,6 +234,7 @@ export function FeedbackPage() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </PageSection>
+    </>
   );
 }

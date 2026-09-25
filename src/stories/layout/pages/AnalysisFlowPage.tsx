@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '../../../components/ui/card';
+import { PageSection } from '../../../components/layout/PageContent';
 import {
   ChartConfig,
   ChartContainer,
@@ -59,9 +60,9 @@ const chartConfig = {
 
 export function AnalysisFlowPage() {
   return (
-    <div className="space-y-6">
+    <>
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <PageSection span="full" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Analysis Flow</h1>
           <p className="text-sm text-muted-foreground mt-1">Deep dive into performance metrics, user flows, and key conversion funnels.</p>
@@ -71,11 +72,10 @@ export function AnalysisFlowPage() {
           <Button variant="outline" size="sm"><Download className="mr-2 h-4 w-4" /> Export</Button>
           <Button size="sm"><Plus className="mr-2 h-4 w-4" /> Create View</Button>
         </div>
-      </div>
+      </PageSection>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Main Chart Area spanning 2 columns */}
-        <div className="lg:col-span-2 flex flex-col gap-6">
+      {/* Main chart area spanning 2 columns */}
+      <PageSection span={2} className="flex flex-col gap-6">
           <Card className="flex-1 min-h-0 flex flex-col">
             <CardHeader>
               <div className="flex items-center justify-between">
@@ -122,9 +122,10 @@ export function AnalysisFlowPage() {
               </ChartContainer>
             </CardContent>
           </Card>
-        </div>
+      </PageSection>
 
-        {/* Actionable Insights Panel */}
+      {/* Actionable Insights Panel */}
+      <PageSection>
         <Card className="flex flex-col border-primary/10 shadow-sm bg-gradient-to-br from-background to-muted/20">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
@@ -161,9 +162,9 @@ export function AnalysisFlowPage() {
             </div>
           </CardContent>
         </Card>
-      </div>
+      </PageSection>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <PageSection span="full" className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Trend Line Chart */}
         <Card>
           <CardHeader>
@@ -200,7 +201,7 @@ export function AnalysisFlowPage() {
             </ChartContainer>
           </CardContent>
         </Card>
-      </div>
-    </div>
+      </PageSection>
+    </>
   );
 }
